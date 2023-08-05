@@ -1,2 +1,2 @@
-# Svelte-DevTools-Splash
-Splash page for Svelte DevTools+
+# Svelte-DevTools-Plus
+Finally, some good DevTools for Svelte

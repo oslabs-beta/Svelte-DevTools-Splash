@@ -29,37 +29,54 @@ type PersonObj = {
   lastname: string;
   github: string;
   linkedin: string;
-  photo: string;
+  // photo: string;
 };
 
-const picArr = ['fake', francis, 'fake', alex, laura, maciej, janice];
+const picArr = [francis, alex, laura, maciej, janice];
+const firstArr = ['Francis', 'Alexander', 'Laura', 'Maciej', 'Janice'];
+const lastArr = ['Espinoza', 'Vranas', 'Glass-Johnston', 'Małecki', 'Chu'];
+const gitArr = ['https://github.com/francis8933', 'https://github.com/avranas', 'https://github.com/ellgeejay', 'https://github.com/maciekmalecki/', 'https://github.com/JaniceKZ'];
+const linkArr = ['https://www.linkedin.com/in/espinozafrancis/', 'https://www.linkedin.com/in/avranas/', 'https://www.linkedin.com/in/laura-glass-johnston/', 'https://www.linkedin.com/in/mmaciej/', 'https://www.linkedin.com/in/janice-chu-075705284/'];
+
+const teammates: Array<PersonObj> = [];
+
+for (let i = 0; i < gitArr.length; i++) {
+  const newMember: PersonObj = {
+    id: i,
+    firstname: firstArr[i],
+    lastname: lastArr[i],
+    github: gitArr[i],
+    linkedin: linkArr[i]
+  };
+  teammates.push(newMember);
+}
 
 const Contributor = () => {
   //////////////////////////////////////////////////////
   ////////Getting Contributors from Database////////////
   //////////////////////////////////////////////////////
 
-  const [teamates, setTeamates] = useState([]);
+  // const [teammates, setTeammates] = useState([]);
 
-  const team = async () => {
-    let people = await fetch('http://localhost:3000/contributors', {
-      method: 'GET',
-      headers: { 'Content-Type': 'application/json' },
-    });
-    const response = await people.json();
-    console.log(response, 'response contributors');
-    setTeamates(response);
-  };
+  // const team = async () => {
+  //   let people = await fetch('http://localhost:3000/contributors', {
+  //     method: 'GET',
+  //     headers: { 'Content-Type': 'application/json' },
+  //   });
+  //   const response = await people.json();
+  //   console.log(response, 'response contributors');
+  //   setTeammates(response);
+  // };
 
-  useEffect(() => {
-    team();
-  }, []);
+  // useEffect(() => {
+  //   team();
+  // }, []);
 
   //////////////////////////////////////////////////////
   ////////////Creating contributors cards///////////////
   //////////////////////////////////////////////////////
 
-  const teamatesInSvelte: JSX.Element[] = teamates.map((person: PersonObj) => {
+  const teammatesInSvelte: JSX.Element[] = teammates.map((person: PersonObj) => {
     return (
       <Box
         id='contributor'
@@ -171,7 +188,7 @@ const Contributor = () => {
             zIndex: '13006',
           }}
           sx={{
-            fontFamily: 'outfit',
+            fontFamily: 'Hanken Grotesk',
             fontSize: '6.2vw',
             fontWeight: 600,
             letterSpacing: '1px',
@@ -199,7 +216,7 @@ const Contributor = () => {
             zIndex: '130',
           }}
         >
-          {teamatesInSvelte}
+          {teammatesInSvelte}
         </Box>
       </div>
     </div>
