@@ -132,7 +132,7 @@ const Navbar: React.FC = () => {
             >
               Github
             </Button>
-            <Button
+            {/* <Button
               color='inherit'
               href='/login'
               style={{ fontSize: '18px' }}
@@ -144,7 +144,7 @@ const Navbar: React.FC = () => {
               }}
             >
               Login
-            </Button>
+            </Button> */}
           </Toolbar>
         </AppBar>
       </Box>
