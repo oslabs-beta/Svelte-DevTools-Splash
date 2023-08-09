@@ -3,7 +3,7 @@ import Header from '../../Parking/Header';
 import NavbarLogin from '../components/NavBarLogin';
 import '../assets/css/style.css';
 const gitHubLogo = require('../assets/github.svg');
-const logo = require('../assets/svelte-devtool-logo (2).png');
+const logo = require('../assets/NewLogo.png');
 // const { useState } = require('react');
 type props = {
   loginHandler: Function;

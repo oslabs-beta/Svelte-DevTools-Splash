@@ -5,8 +5,8 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import { Grid, Input } from '@mui/material';
 import Button from '@mui/material/Button';
-const logo1 = require('../assets/logo.png');
-const logo2 = require('../assets/DevTools.png');
+const logo1 = require('../assets/NewLogo.png');
+const logo2 = require('../assets/NewLogo.png');
 
 const scrollTeam = () => {
   const section = document.querySelector('#TeamBio');

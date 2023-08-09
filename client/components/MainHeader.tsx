@@ -1,9 +1,6 @@
 import React from 'react';
 import { Grid, Typography } from '@mui/material';
-// const logo = require('../assets/1200px-Svelte_Logo.svg.png');
-// const logo1 = require('../assets/DevTools.png');
-const logo = require('../assets/svelte-devtool-logo (2).png');
-// const logo1 = require('../assets/svelte-devtool-logo (3).png');
+const logo = require('../assets/NewLogo.png');
 import Box from '@mui/material/Box';
 
 const MainHeader = () => {
