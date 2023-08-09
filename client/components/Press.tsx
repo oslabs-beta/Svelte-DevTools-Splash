@@ -53,7 +53,7 @@ const Press = () => {
             component='img'
             src={MediumLogo}
             onClick={() =>
-              window.open('https://www.youtube.com/watch?v=nlYlNF30bVg')
+              window.open('https://medium.com/@laura.glassjohnston/introducing-svelte-devtools-9fe8e58b15bd')
             }
             sx={{
               width: '45%',
@@ -64,7 +64,7 @@ const Press = () => {
             }}
           ></Box>
           <div style={{ width: '50px' }} />
-          <Box
+          {/* <Box
             id='ProductHuntArticle'
             component='img'
             src={productHuntLogo}
@@ -79,7 +79,7 @@ const Press = () => {
               // bgcolor:'red',
               ':hover': 'pointer',
             }}
-          ></Box>
+          ></Box> */}
         </Box>
       </div>
     </div>
