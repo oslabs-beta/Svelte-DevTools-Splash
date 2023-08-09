@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../../Parking/Header';
-const logo = require('../assets/svelte-devtool-logo (2).png');
+const logo = require('../assets/NewLogo.png');
 import NavbarLogin from '../components/NavBarLogin';
 
 type props = {
