@@ -64,12 +64,12 @@ const Press = () => {
             }}
           ></Box>
           <div style={{ width: '50px' }} />
-          {/* <Box
+          <Box
             id='ProductHuntArticle'
             component='img'
             src={productHuntLogo}
             onClick={() =>
-              window.open('https://www.youtube.com/watch?v=nlYlNF30bVg')
+              window.open('https://www.producthunt.com/posts/svelte-devtools')
             }
             sx={{
               width: '45%',
@@ -79,7 +79,7 @@ const Press = () => {
               // bgcolor:'red',
               ':hover': 'pointer',
             }}
-          ></Box> */}
+          ></Box>
         </Box>
       </div>
     </div>
