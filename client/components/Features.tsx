@@ -231,7 +231,7 @@ const Features = () => {
             alt='Google Chrome Web Store icon'
             onClick={() =>
               window.open(
-                'https://chrome.google.com/webstore/search/svelte?hl=en'
+                'https://chrome.google.com/webstore/detail/svelte-devtools%2B/bgelkjgjabbfoeiicgoddeadicoofcfk?hl=en-GB'
               )
             }
             sx={{
