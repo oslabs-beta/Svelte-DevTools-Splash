@@ -14,7 +14,6 @@ const Press = () => {
           alignItems: 'center',
           justifyContent: 'center',
           zIndex: '40000',
-          marginTop: '90px',
         }}
       >
         <Typography

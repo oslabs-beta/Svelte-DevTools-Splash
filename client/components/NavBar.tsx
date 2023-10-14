@@ -5,8 +5,8 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import { Grid, Input } from '@mui/material';
 import Button from '@mui/material/Button';
-const logo1 = require('../assets/NewLogo.png');
-const logo2 = require('../assets/NewLogo.png');
+// const logo1 = require('../assets/NewLogo.png');
+// const logo2 = require('../assets/NewLogo.png');
 
 const scrollTeam = () => {
   const section = document.querySelector('#TeamBio');
@@ -34,15 +34,7 @@ const Navbar: React.FC = () => {
   return (
     <Grid id='nav-bar'>
       <Box>
-        <AppBar
-          style={{
-            background: '#000000',
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            zIndex: '35000',
-          }}
-        >
+        <AppBar id="app-bar">
           <Box
             sx={{ display: 'flex', alignItems: 'center', marginLeft: '20px' }}
           >
