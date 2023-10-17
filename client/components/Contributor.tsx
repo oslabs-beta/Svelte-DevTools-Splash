@@ -1,7 +1,4 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import { Typography } from '@mui/material';
-import Box from '@mui/material/Box';
+import { Typography, Box } from '@mui/material';
 const linkedInPng = require('../assets/linkedIn.svg');
 const githubPng = require('../assets/github.svg');
 const maciej = require('../assets/MaciejPng.png');
@@ -23,10 +20,10 @@ const styles = {
   },
 };
 
-type PersonObj = {
+type TeamMember = {
   id: number;
-  firstname: string;
-  lastname: string;
+  firstName: string;
+  lastName: string;
   github: string;
   linkedin: string;
   // photo: string;
@@ -38,13 +35,13 @@ const lastArr = ['Espinoza', 'Vranas', 'Glass-Johnston', 'Małecki', 'Chu'];
 const gitArr = ['https://github.com/francis8933', 'https://github.com/avranas', 'https://github.com/ellgeejay', 'https://github.com/maciekmalecki/', 'https://github.com/JaniceKZ'];
 const linkArr = ['https://www.linkedin.com/in/espinozafrancis/', 'https://www.linkedin.com/in/avranas/', 'https://www.linkedin.com/in/laura-glass-johnston/', 'https://www.linkedin.com/in/mmaciej/', 'https://www.linkedin.com/in/janice-chu-075705284/'];
 
-const teammates: Array<PersonObj> = [];
+const teammates: Array<TeamMember> = [];
 
 for (let i = 0; i < gitArr.length; i++) {
-  const newMember: PersonObj = {
+  const newMember: TeamMember = {
     id: i,
-    firstname: firstArr[i],
-    lastname: lastArr[i],
+    firstName: firstArr[i],
+    lastName: lastArr[i],
     github: gitArr[i],
     linkedin: linkArr[i]
   };
@@ -52,10 +49,8 @@ for (let i = 0; i < gitArr.length; i++) {
 }
 
 const Contributor = () => {
-  //////////////////////////////////////////////////////
-  ////////Getting Contributors from Database////////////
-  //////////////////////////////////////////////////////
-
+  /*
+    Getting Contributors from Database
   // const [teammates, setTeammates] = useState([]);
 
   // const team = async () => {
@@ -71,12 +66,10 @@ const Contributor = () => {
   // useEffect(() => {
   //   team();
   // }, []);
+*/
 
-  //////////////////////////////////////////////////////
-  ////////////Creating contributors cards///////////////
-  //////////////////////////////////////////////////////
-
-  const teammatesInSvelte: JSX.Element[] = teammates.map((person: PersonObj) => {
+// Creating contributors cards
+  const svelteSquad: JSX.Element[] = teammates.map((person: TeamMember) => {
     return (
       <Box
         id='contributor'
@@ -109,9 +102,8 @@ const Contributor = () => {
           color='whitesmoke'
           mb='5px'
           fontSize='25px'
-          // textShadow='1px 1px 5px rgb(0, 0, 0, 0.3)'
         >
-          {person.firstname} {person.lastname}
+          {person.firstName} {person.lastName}
         </Typography>
         <Typography
           variant='h5'
@@ -119,7 +111,6 @@ const Contributor = () => {
           color='whitesmoke'
           mb='15px'
           fontSize='20px'
-          // textShadow='1px 1px 5px rgb(0, 0, 0, 0.3)'
         >
           Software Engineer
         </Typography>
@@ -155,9 +146,6 @@ const Contributor = () => {
     );
   });
 
-  //////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////
-
   return (
     <div
       id='teamTopDiv'
@@ -174,8 +162,6 @@ const Contributor = () => {
         id='TeamBio'
         style={{
           zIndex: '14001',
-          // width: '800px',
-          // height:"auto",
           flexWrap: 'wrap',
           justifyContent: 'center',
           alignItems: 'center',
@@ -216,7 +202,7 @@ const Contributor = () => {
             zIndex: '130',
           }}
         >
-          {teammatesInSvelte}
+          {svelteSquad}
         </Box>
       </div>
     </div>
