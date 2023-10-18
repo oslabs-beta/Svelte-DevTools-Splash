@@ -22,26 +22,30 @@ const buttonStyles = {
 
 const Navbar: React.FC = () => {
   return (
-    <Grid id='nav-bar'>
+    <Grid id="nav-bar">
       <Box>
-        <AppBar id="app-bar">
-          <Box
-            sx={{ display: 'flex', alignItems: 'center', ml: '20px' }}
-          >
+        <AppBar
+          id="app-bar"
+          style={{
+            background: '#000000',
+          }}
+        >
+          Í
+          <Box sx={{ display: 'flex', alignItems: 'center', ml: '20px' }}>
             <span style={{ color: 'inherit', fontSize: '32px' }}>
               Svelte DevTools+
             </span>
           </Box>
           <Toolbar>
             {[
-              { label: "Extension", selector: "#logo" },
-              { label: "Features", selector: "#features" },
-              { label: "Press", selector: "#press" },
-              { label: "Team", selector: "#TeamBio" },
-            ].map(item => (
+              { label: 'Extension', selector: '#logo' },
+              { label: 'Features', selector: '#features' },
+              { label: 'Press', selector: '#press' },
+              { label: 'Team', selector: '#TeamBio' },
+            ].map((item) => (
               <Button
                 key={item.label}
-                color='inherit'
+                color="inherit"
                 onClick={() => scrollToSection(item.selector)}
                 sx={buttonStyles}
               >
@@ -49,9 +53,9 @@ const Navbar: React.FC = () => {
               </Button>
             ))}
             <Button
-              color='inherit'
-              href='https://github.com/oslabs-beta/Svelte-DevTools-Plus'
-              target='_blank'
+              color="inherit"
+              href="https://github.com/oslabs-beta/Svelte-DevTools-Plus"
+              target="_blank"
               sx={buttonStyles}
             >
               Github

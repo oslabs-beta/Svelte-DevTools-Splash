@@ -351,7 +351,7 @@ const Features = () => {
           {dashboardImg}
         </Box>
         <Box
-          id='feature2'
+          className='feature'
           style={{
             display: 'flex',
             flexDirection: 'row',
@@ -378,7 +378,7 @@ const Features = () => {
             }}
           >
             <Typography
-              className='titles2'
+              className='titles'
               variant='h4'
               sx={{
                 fontFamily: 'Hanken Grotesk',
@@ -422,7 +422,7 @@ const Features = () => {
           {setupImg}
         </Box>
         <Box
-          id='feature3'
+          className='feature'
           style={{
             display: 'flex',
             flexDirection: 'row-reverse',
@@ -450,7 +450,7 @@ const Features = () => {
             }}
           >
             <Typography
-              className='titles3'
+              className='titles'
               variant='h4'
               sx={{
                 fontFamily: 'Hanken Grotesk',
@@ -495,7 +495,7 @@ const Features = () => {
         </Box>
 
         <Box
-          id='feature4'
+          className='feature'
           style={{
             display: 'flex',
             flexDirection: 'row',
@@ -522,7 +522,7 @@ const Features = () => {
             }}
           >
             <Typography
-              className='titles2'
+              className='titles'
               variant='h4'
               sx={{
                 fontFamily: 'Hanken Grotesk',
@@ -569,7 +569,7 @@ const Features = () => {
         </Box>
 
         <Box
-          id='feature5'
+          className='feature'
           style={{
             display: 'flex',
             flexDirection: 'row-reverse',
@@ -597,20 +597,8 @@ const Features = () => {
             }}
           >
             <Typography
-              className='titles3'
+              className='titles'
               variant='h4'
-              sx={{
-                fontFamily: 'Hanken Grotesk',
-                fontWeight: '800',
-                fontSize: '2vw',
-                letterSpacing: '1px',
-                color: 'white',
-                textDecoration: 'none',
-                alignItems: 'center',
-                textAlign: 'center',
-                zIndex: '130',
-                textShadow: '1px 1px 5px rgb(0, 0, 0, 0.4)',
-              }}
             >
               STATE REWIND
             </Typography>
