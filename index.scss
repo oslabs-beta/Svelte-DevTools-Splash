@@ -73,10 +73,16 @@ body {
 
 @media only screen and (max-width: 1100px) {
 
+  .MuiTypography-h4 {
+    font-size: 2rem !important;
+  }
+
+  .MuiTypography-h5 {
+    font-size: 1rem !important;
+
+  }
+
   .feature {
-    display: flex !important;
-    flex-direction: column-reverse !important;
-    justify-content: space-evenly !important;
     align-items: center !important;
     align-content: center !important;
     margin-bottom: 10 !important;
@@ -88,7 +94,6 @@ body {
   .titles {
     text-align: center !important;
     font-weight: 800 !important;
-    font-size: 40px !important;
     letter-spacing: 2px !important;
     color: white !important;
     text-decoration: none !important;
@@ -116,12 +121,8 @@ body {
     margin-right: 7% !important;;
   }
 
-  .image
-  .image2
-  .image3
-  .image4
-  .image5 {
-    width: 50% !important;;
+  .image{
+    width: 90% !important;
   }
 
   #pressimages {

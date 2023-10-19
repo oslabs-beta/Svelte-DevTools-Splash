@@ -77,7 +77,7 @@ const Features = () => {
         src={Dynamic}
         alt="Screenshot of Svelte DevTools+ displaying real-time changes in a component's state and props"
         component='img'
-        className='image2'
+        className='image'
         sx={{
           width: '800px',
           mb: 6,
@@ -115,7 +115,7 @@ const Features = () => {
         src={Inspect}
         alt="Screenshot of Svelte DevTools+ displaying a visual component tree, inspecting component's props, states and context"
         component='img'
-        className='image3'
+        className='image'
         sx={{
           width: '800px',
           mb: 6,
@@ -153,7 +153,7 @@ const Features = () => {
         src={Dynamic}
         alt="Screenshot of a time-travel debugging feature to inspect the application's state at different points in time and analyze state changes"
         component='img'
-        className='image5'
+        className='image'
         sx={{
           width: '800px',
           mb: 6,
@@ -191,7 +191,7 @@ const Features = () => {
         src={Edit}
         alt='Screenshot of modifying the state and props of a selected component directly from Svelte DevTools+ for testing and debugging'
         component='img'
-        className='image4'
+        className='image'
         sx={{
           width: '800px',
           mb: 6,
@@ -275,7 +275,7 @@ const Features = () => {
       </div>
       <div id='featuresDiv' style={{ marginLeft: '15px' }}>
         <Box
-          id='feature1'
+          className='feature'
           style={{
             display: 'flex',
             flexDirection: 'row-reverse',
@@ -579,7 +579,6 @@ const Features = () => {
             marginBottom: 0,
             marginTop: '100px',
             zIndex: '130',
-            // bgcolor: 'red',
           }}
         >
           <Box
@@ -593,7 +592,6 @@ const Features = () => {
               marginRight: '5%',
 
               marginTop: '6%',
-              // bgcolor: 'blue',
             }}
           >
             <Typography
