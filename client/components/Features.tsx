@@ -5,7 +5,6 @@ const StepAndTree = require('../assets/StepAndTree.gif');
 const Inspect = require('../assets/Inspect.gif');
 const Edit = require('../assets/Edit.gif');
 const Dynamic = require('../assets/Dynamic.gif');
-// const Time = require('../assets/Time.gif');
 import { Typography } from '@mui/material';
 import Tilt from 'react-parallax-tilt';
 import { browserName } from 'react-device-detect';
@@ -16,15 +15,9 @@ const Features = () => {
 
   if (browserName.includes('Safari')) {
     tilt = false;
-    // helpdesk = helpdeskJPG;
-    // lightmode = lightmodeJPG;
   }
-  // console.log('browserName is', browserName);
-  // console.log('browserVersion is', browserVersion);
-
   let dashboardImg = (
     <Tilt
-      // tiltAngleYInitial='90'
       tiltEnable={tilt}
       tiltMaxAngleX={8}
       tiltMaxAngleY={8}
@@ -175,7 +168,6 @@ const Features = () => {
   );
   let helpdeskImg = (
     <Tilt
-      // tiltAngleYInitial='90'
       tiltEnable={tilt}
       tiltMaxAngleX={8}
       tiltMaxAngleY={8}
@@ -258,16 +250,16 @@ const Features = () => {
           variant='h2'
           textAlign='center'
           sx={{
-            fontFamily: 'Hanken Grotesk',
-            fontSize: 30,
-            fontWeight: 800,
-            letterSpacing: '1px',
-            color: 'white',
-            textDecoration: 'none',
-            mt: 0,
-            mb: 10,
-            zIndex: '130',
-            textShadow: '1px 1px 5px rgb(0, 0, 0, 0.4)',
+            // fontFamily: 'Hanken Grotesk',
+            // fontSize: 30,
+            // fontWeight: 800,
+            // letterSpacing: '1px',
+            // color: 'white',
+            // textDecoration: 'none',
+            // mt: 0,
+            // mb: 10,
+            // zIndex: '130',
+            // textShadow: '1px 1px 5px rgb(0, 0, 0, 0.4)',
           }}
         >
           FEATURING:
@@ -285,7 +277,6 @@ const Features = () => {
             marginBottom: 0,
             marginTop: '100',
             zIndex: '130',
-            // bgcolor: 'red',
           }}
         >
           <Box
@@ -299,44 +290,17 @@ const Features = () => {
               marginRight: '5%',
 
               marginTop: '4.5%',
-              // bgcolor: 'blue',
             }}
           >
             <Typography
               className='titles'
               variant='h4'
-              sx={{
-                fontFamily: 'Hanken Grotesk',
-                fontWeight: '800',
-                fontSize: '2vw',
-                letterSpacing: '1px',
-                color: 'white',
-                textDecoration: 'none',
-
-                textAlign: 'center',
-                zIndex: '130',
-                textShadow: '1px 1px 5px rgb(0, 0, 0, 0.4)',
-              }}
             >
               DYNAMIC COMPONENT VISUALIZATION
             </Typography>
             <Typography
               className='blurbs'
               variant='h5'
-              sx={{
-                fontFamily: 'Hanken Grotesk',
-                fontWeight: 50,
-                fontSize: '1.5vw',
-                letterSpacing: '.1 rem',
-                color: 'white',
-                textDecoration: 'none',
-                mt: 3,
-                mb: 15,
-                alignContent: 'center',
-
-                textAlign: 'center',
-                textShadow: '1px 1px 5px rgb(0, 0, 0, 0.3)',
-              }}
             >
               Svelte DevTools+ allows developers to inspect the component
               hierarchy of a Svelte application in either a step-like or
@@ -374,44 +338,17 @@ const Features = () => {
               zIndex: '130',
               marginLeft: '3%',
               marginTop: '4.2%',
-              // bgcolor: 'blue',
             }}
           >
             <Typography
               className='titles'
               variant='h4'
-              sx={{
-                fontFamily: 'Hanken Grotesk',
-                fontWeight: '800',
-                fontSize: '2vw',
-                letterSpacing: '1px',
-                color: 'white',
-                textDecoration: 'none',
-                textAlign: 'center',
-                alignItems: 'center',
-                zIndex: '130',
-                textShadow: '1px 1px 5px rgb(0, 0, 0, 0.4)',
-              }}
             >
               REAL-TIME STATE AND PROPS UPDATES
             </Typography>
             <Typography
               className='blurbs2'
               variant='h5'
-              sx={{
-                fontFamily: 'Hanken Grotesk',
-                fontWeight: 50,
-                fontSize: '1.5vw',
-                letterSpacing: '.1 rem',
-                color: 'white',
-                textDecoration: 'none',
-                mt: 3,
-                mb: 15,
-                pr: 2,
-                alignContent: 'center',
-                textAlign: 'center',
-                textShadow: '1px 1px 5px rgb(0, 0, 0, 0.3)',
-              }}
             >
               Svelte DevTools+ allows developers to see the real-time changes in
               a component's state and props, immediately reflecting updates in
@@ -432,7 +369,6 @@ const Features = () => {
             marginBottom: 40,
             marginTop: '100px',
             zIndex: '130',
-            // bgcolor: 'red',
           }}
         >
           <Box
@@ -446,44 +382,17 @@ const Features = () => {
               marginRight: '5%',
 
               marginTop: '6%',
-              // bgcolor: 'blue',
             }}
           >
             <Typography
               className='titles'
               variant='h4'
-              sx={{
-                fontFamily: 'Hanken Grotesk',
-                fontWeight: '800',
-                fontSize: '2vw',
-                letterSpacing: '1px',
-                color: 'white',
-                textDecoration: 'none',
-                alignItems: 'center',
-                textAlign: 'center',
-                zIndex: '130',
-                textShadow: '1px 1px 5px rgb(0, 0, 0, 0.4)',
-              }}
             >
               COMPONENT INSPECTION
             </Typography>
             <Typography
               className='blurbs'
               variant='h5'
-              sx={{
-                fontFamily: 'Hanken Grotesk',
-                fontWeight: 50,
-                fontSize: '1.5vw',
-                letterSpacing: '.1 rem',
-                color: 'white',
-                textDecoration: 'none',
-                mt: 3,
-                mb: 15,
-                alignContent: 'center',
-
-                textAlign: 'center',
-                textShadow: '1px 1px 5px rgb(0, 0, 0, 0.3)',
-              }}
             >
               When selecting a component in the DevTools component tree,
               developers can inspect the component's props, state, and context
@@ -518,44 +427,17 @@ const Features = () => {
               zIndex: '130',
               marginLeft: '3%',
               marginTop: '4.2%',
-              // bgcolor: 'blue',
             }}
           >
             <Typography
               className='titles'
               variant='h4'
-              sx={{
-                fontFamily: 'Hanken Grotesk',
-                fontWeight: '800',
-                fontSize: '2vw',
-                letterSpacing: '1px',
-                color: 'white',
-                textDecoration: 'none',
-                textAlign: 'center',
-                alignItems: 'center',
-                zIndex: '130',
-                textShadow: '1px 1px 5px rgb(0, 0, 0, 0.4)',
-              }}
             >
               COMPONENT STATE MODIFICATION
             </Typography>
             <Typography
               className='blurbs2'
               variant='h5'
-              sx={{
-                fontFamily: 'Hanken Grotesk',
-                fontWeight: 50,
-                fontSize: '1.5vw',
-                letterSpacing: '.1 rem',
-                color: 'white',
-                textDecoration: 'none',
-                mt: 3,
-                mb: 15,
-                pr: 2,
-                alignContent: 'center',
-                textAlign: 'center',
-                textShadow: '1px 1px 5px rgb(0, 0, 0, 0.3)',
-              }}
             >
               Developers can modify the state and props of a selected component
               directly from the DevTools for testing and debugging purposes
@@ -603,20 +485,20 @@ const Features = () => {
             <Typography
               className='blurbs'
               variant='h5'
-              sx={{
-                fontFamily: 'Hanken Grotesk',
-                fontWeight: 50,
-                fontSize: '1.5vw',
-                letterSpacing: '.1 rem',
-                color: 'white',
-                textDecoration: 'none',
-                mt: 3,
-                mb: 15,
-                alignContent: 'center',
+              // sx={{
+              //   fontFamily: 'Hanken Grotesk',
+              //   fontWeight: 50,
+              //   fontSize: '1.5vw',
+              //   letterSpacing: '.1 rem',
+              //   color: 'white',
+              //   textDecoration: 'none',
+              //   mt: 3,
+              //   mb: 15,
+              //   alignContent: 'center',
 
-                textAlign: 'center',
-                textShadow: '1px 1px 5px rgb(0, 0, 0, 0.3)',
-              }}
+              //   textAlign: 'center',
+              //   textShadow: '1px 1px 5px rgb(0, 0, 0, 0.3)',
+              // }}
             >
               Svelte DevTools+ provides a time-travel debugging feature that
               enables developers to inspect the application's state at different

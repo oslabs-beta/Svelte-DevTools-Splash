@@ -58,6 +58,20 @@ body {
   height: 100%;
 }
 
+
+.MuiTypography-h2 {
+  font-family: 'Hanken Grotesk';
+  font-size: 30;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: 'white';
+  text-decoration: none;
+  margin-top: 0;
+  margin-bottom: 10;
+  z-index: '130';
+  text-shadow: 1px 1px 5px rgb(0, 0, 0, 0.4);
+}
+
 .MuiTypography-h4 {
   font-family: 'Hanken Grotesk';
   font-weight: 800;
@@ -71,6 +85,20 @@ body {
   text-shadow: 1px 1px 5px rgb(0, 0, 0, 0.4);
 }
 
+.MuiTypography-h5 {
+    font-family: 'Hanken Grotesk';
+    font-weight: 50;
+    font-size: 1.5vw;
+    letter-spacing: 0.1 rem;
+    color: white;
+    text-decoration: none;
+    margin-top: 3;
+    margin-bottom: 15;
+    align-content: center;
+    text-align: center;
+    text-shadow: 1px 1px 5px rgb(0, 0, 0, 0.3);
+}
+
 @media only screen and (max-width: 1100px) {
 
   .MuiTypography-h4 {
@@ -79,7 +107,6 @@ body {
 
   .MuiTypography-h5 {
     font-size: 1rem !important;
-
   }
 
   .feature {
