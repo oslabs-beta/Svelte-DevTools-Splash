@@ -115,7 +115,7 @@ h2 {
   color: white;
   text-decoration: none;
   text-shadow: 1px 1px 5px rgb(0, 0, 0, 0.4);
-  z-index: 40000;
+  z-index: 0;
 }
 
 h3 {
@@ -210,28 +210,6 @@ p {
     margin-right: 0;
   }
 
-  // .titles {
-  //   text-align: center;
-  //   font-weight: 800;
-  //   letter-spacing: 2px;
-  //   color: white;
-  //   text-decoration: none;
-  //   z-index: 130;
-  //   margin-right: 0;
-  //   margin-left: 5%;
-  //   justify-content: center;
-  //   align-items: center;
-  //   text-shadow: 1px 1px 5px rgb(0, 0, 0, 0.4);
-  // }
-
-  // .blurbs {
-  //   margin-left: 8%;
-  //   margin-right: 3%;
-  //   font-weight: 50;
-  //   font-size: 1.8rem;
-  //   letter-spacing: 0.1rem;
-  // }
-
   .image {
     width: 90%;
   }
@@ -271,14 +249,6 @@ p {
     margin-bottom: 2rem;
   }
 }
-
-// #app-bar {
-//   display: 'flex';
-//   flex-direction: 'row';
-//   justify-content: 'space-between';
-//   z-index: '35000';
-//   background-color: black;
-// }
 
 @media only screen and (max-width: 720px) {
   #app-bar {

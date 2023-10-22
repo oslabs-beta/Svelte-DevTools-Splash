@@ -4,7 +4,7 @@ const MediumLogo = require('../assets/MediumLogo.png');
 
 const Press = () => {
   return (
-    <div id='press' style={{ zIndex: '14009', paddingTop: '60px' }}>
+    <div id="press" style={{ zIndex: '14009', paddingTop: '60px' }}>
       <div
         style={{
           display: 'flex',
@@ -14,29 +14,9 @@ const Press = () => {
           zIndex: '40000',
         }}
       >
-        <h1
-          // variant='h2'
-          // textAlign='center'
-          // style={{
-          //   zIndex: '34016',
-          // }}
-          // sx={{
-          //   fontFamily: 'Hanken Grotesk',
-          //   fontSize: '6.2vw',
-          //   fontWeight: 600,
-          //   letterSpacing: '1px',
-          //   color: 'white',
-          //   textDecoration: 'none',
-          //   mt: 20,
-          //   mb: 9,
-          //   zIndex: '34016',
-          //   textShadow: '1px 1px 5px rgb(0, 0, 0, 0.5)',
-          // }}
-        >
-          Read About Us
-        </h1>
+        <h1>Read About Us</h1>
         <Box
-          id='pressimages'
+          id="pressimages"
           sx={{
             display: 'flex',
             flexDirection: 'row',
@@ -46,24 +26,25 @@ const Press = () => {
           }}
         >
           <Box
-            id='MediumArticle'
-            component='img'
+            id="MediumArticle"
+            component="img"
             src={MediumLogo}
             onClick={() =>
-              window.open('https://medium.com/@laura.glassjohnston/introducing-svelte-devtools-9fe8e58b15bd')
+              window.open(
+                'https://medium.com/@laura.glassjohnston/introducing-svelte-devtools-9fe8e58b15bd'
+              )
             }
             sx={{
               width: '45%',
               zIndex: '3410',
               mb: '60px',
-              // bgcolor:'red',
               ':hover': 'pointer',
             }}
           ></Box>
           <div style={{ width: '50px' }} />
           <Box
-            id='ProductHuntArticle'
-            component='img'
+            id="ProductHuntArticle"
+            component="img"
             src={productHuntLogo}
             onClick={() =>
               window.open('https://www.producthunt.com/posts/svelte-devtools')
@@ -73,7 +54,6 @@ const Press = () => {
 
               zIndex: '3410',
               mb: '60px',
-              // bgcolor:'red',
               ':hover': 'pointer',
             }}
           ></Box>
