@@ -67,6 +67,11 @@ body {
   z-index: 130;
 }
 
+#features-content {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .feature-mirror {
   display: flex;
   flex-direction: row;
@@ -85,16 +90,21 @@ body {
   margin-top: 6rem;
 }
 
+.feature-description {
+  padding: 2rem;
+}
+
 h1 {
-  text-shadow: '2px 2px 10px rgb(0, 0, 0, 0.5)';
+  text-shadow: 2px 2px 10px rgb(0, 0, 0, 0.5);
   font-family: 'Hanken Grotesk';
-  font-size: 85;
-  font-weight: 'normal';
-  letter-spacing: '0px';
-  color: '#f5f5f5';
-  text-decoration: 'none';
+  font-size: 85px;
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: 0px;
+  text-decoration: none;
   margin-bottom: 3;
-  z-index: '130';
+  z-index: 130;
+  color: white;
 }
 
 h2 {
@@ -106,6 +116,19 @@ h2 {
   text-decoration: none;
   text-shadow: 1px 1px 5px rgb(0, 0, 0, 0.4);
   z-index: 40000;
+}
+
+h3 {
+  font-family: inherit;
+  font-weight: 50;
+  font-size: 1.8rem;
+  letter-spacing: 0.1 rem;
+  color: #f5f5f5;
+  text-decoration: none;
+  margin-top: 1px;
+  margin-bottom: 2px;
+  z-index: 130;
+  text-shadow: 1px 1px 5px rgb(0, 0, 0, 0.3);
 }
 
 h4 {
@@ -122,20 +145,34 @@ h4 {
 }
 
 h5 {
+  text-align: center;
+  font-family: 'Hanken Grotesk';
+  font-size: 24px;
+  letter-spacing: 0.1 rem;
+  color: white;
+  text-decoration: none;
+  z-index: 130;
+  text-shadow: 1px 1px 5px rgb(0, 0, 0, 0.3);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+p {
   font-family: 'Hanken Grotesk';
   font-size: 1.5vw;
   letter-spacing: 0.1rem;
   color: white;
   text-decoration: none;
   margin-top: 3px;
-  margin-bottom: 15px;
+  margin-bottom: 2rem;
   align-content: center;
   text-align: center;
   text-shadow: 1px 1px 5px rgb(0, 0, 0, 0.3);
   font-weight: 100;
-  padding-left: 2rem;
-  padding-right: 2rem;
+}
 
+.orange-text {
+  color: #ff5e00;
 }
 
 .image {
@@ -156,13 +193,13 @@ h5 {
 }
 
 @media only screen and (max-width: 1100px) {
-  h4 {
-    font-size: 2rem;
-  }
+  // h4 {
+  //   font-size: 2rem;
+  // }
 
-  h5 {
-    font-size: 1rem;
-  }
+  // h5 {
+  //   font-size: 1rem;
+  // }
 
   .feature {
     align-items: center;
@@ -229,22 +266,19 @@ h5 {
     cursor: pointer;
   }
 
-  #featuresDiv {
-    margin-left: 0;
-  }
-
   #contributor {
     flex-wrap: wrap;
     margin-bottom: 2rem;
   }
 }
 
-#app-bar {
-  display: 'flex';
-  flex-direction: 'row';
-  justify-content: 'space-between';
-  z-index: '35000';
-}
+// #app-bar {
+//   display: 'flex';
+//   flex-direction: 'row';
+//   justify-content: 'space-between';
+//   z-index: '35000';
+//   background-color: black;
+// }
 
 @media only screen and (max-width: 720px) {
   #app-bar {

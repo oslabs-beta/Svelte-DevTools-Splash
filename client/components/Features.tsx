@@ -157,85 +157,70 @@ const Features = () => {
         </Box>
       </Box>
       <div id="features-header">
-        <h2>
-          FEATURING
-        </h2>
+        <h2>FEATURING</h2>
       </div>
-      <div id="featuresDiv" style={{ marginLeft: '15px' }}>
+      <div id="features-content" >
         <Box className="feature">
-          <Box>
-            <h4>
-              DYNAMIC COMPONENT VISUALIZATION
-            </h4>
-            <h5>
+          <Box className="feature-description">
+            <h4>DYNAMIC COMPONENT VISUALIZATION</h4>
+            <p>
               Svelte DevTools+ allows developers to inspect the component
               hierarchy of a Svelte application
-              <br></br>
-              <br></br>
-              It provides a visual representation of how components are
-              nested inside each other, making it easier to understand the
+            </p>
+            <p>
+              It provides a visual representation of how components are nested
+              inside each other, making it easier to understand the
               application's structure
-            </h5>
+            </p>
           </Box>
           {dashboardImg}
         </Box>
         <Box className="feature-mirror">
-          <Box>
-            <h4>
-              REAL-TIME STATE AND PROPS UPDATES
-            </h4>
-            <h5>
+          <Box className="feature-description">
+            <h4>REAL-TIME STATE AND PROPS UPDATES</h4>
+            <p>
               Svelte DevTools+ allows developers to see the real-time changes in
               a component's state and props, immediately reflecting updates in
               the DevTool and allowing for simple tracking of the application's
               behavior
-            </h5>
+            </p>
           </Box>
           {setupImg}
         </Box>
         <Box className="feature">
-          <Box>
-            <h4>
-              COMPONENT INSPECTION
-            </h4>
-            <h5>
+          <Box className="feature-description">
+            <h4>COMPONENT INSPECTION</h4>
+            <p>
               When selecting a component in the DevTools component tree,
               developers can inspect the component's props, state, and context
               to aid in understanding the data and values that are passed to
               each component
-            </h5>
+            </p>
           </Box>
           {metricsImg}
         </Box>
 
         <Box className="feature-mirror">
-          <Box>
-            <h4>
-              COMPONENT STATE MODIFICATION
-            </h4>
-            <h5>
+          <Box className="feature-description">
+            <h4>COMPONENT STATE MODIFICATION</h4>
+            <p>
               Developers can modify the state and props of a selected component
-              directly from the DevTools for testing and debugging purposes
-              <br></br>
-              <br></br>
-              This can be helpful in experimenting with different scenarios
-              without modifying the actual code
-            </h5>
+              directly from the DevTools for testing and debugging purposes, making it easy to experiment with different scenarios
+              without modifying your code
+            </p>
           </Box>
           {helpDeskImg}
         </Box>
 
         <Box className="feature">
-          <Box>
-            <h4>
-              STATE REWIND
-            </h4>
-            <h5>
+          <Box className="feature-description">
+            <h4>STATE REWIND</h4>
+            <p>
               Svelte DevTools+ provides a time-travel debugging feature that
               enables developers to inspect the application's state at different
               points in time and analyze how the state of the application
               changes
-            </h5>
+            </p>
           </Box>
           {lightmodeImg}
         </Box>

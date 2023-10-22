@@ -77,7 +77,7 @@ const MainHeader = () => {
             >
               Svelte DevTools+
             </h1>
-            <h4
+            <h3
               // variant='h4'
               // align='center'
               // sx={{
@@ -94,8 +94,9 @@ const MainHeader = () => {
               // }}
             >
               Unlock the full power of the Svelte with Svelte DevTools+
-            </h4>
-            <h4
+            </h3>
+            <h5
+            className="orange-text"
               // variant='h4'
               // align='center'
               // sx={{
@@ -111,7 +112,7 @@ const MainHeader = () => {
               // }}
             >
               Go to extension store
-            </h4>
+            </h5>
           </Box>
         </Grid>
       </Box>

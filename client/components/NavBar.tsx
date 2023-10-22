@@ -28,6 +28,10 @@ const Navbar: React.FC = () => {
           id="app-bar"
           style={{
             background: '#000000',
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            zIndex: '35000',
           }}
         >
           <Box sx={{ display: 'flex', alignItems: 'center', ml: '20px' }}>

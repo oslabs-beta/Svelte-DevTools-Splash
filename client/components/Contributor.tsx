@@ -17,7 +17,7 @@ const styles = {
     marginTop: '10px',
     zIndex: '1310',
     display: 'flex',
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
 };
 
@@ -32,8 +32,20 @@ type TeamMember = {
 const picArr = [francis, alex, laura, maciej, janice];
 const firstArr = ['Francis', 'Alexander', 'Laura', 'Maciej', 'Janice'];
 const lastArr = ['Espinoza', 'Vranas', 'Glass-Johnston', 'Małecki', 'Chu'];
-const gitArr = ['https://github.com/francis8933', 'https://github.com/avranas', 'https://github.com/ellgeejay', 'https://github.com/maciekmalecki/', 'https://github.com/JaniceKZ'];
-const linkArr = ['https://www.linkedin.com/in/espinozafrancis/', 'https://www.linkedin.com/in/avranas/', 'https://www.linkedin.com/in/laura-glass-johnston/', 'https://www.linkedin.com/in/mmaciej/', 'https://www.linkedin.com/in/janice-chu-075705284/'];
+const gitArr = [
+  'https://github.com/francis8933',
+  'https://github.com/avranas',
+  'https://github.com/ellgeejay',
+  'https://github.com/maciekmalecki/',
+  'https://github.com/JaniceKZ',
+];
+const linkArr = [
+  'https://www.linkedin.com/in/espinozafrancis/',
+  'https://www.linkedin.com/in/avranas/',
+  'https://www.linkedin.com/in/laura-glass-johnston/',
+  'https://www.linkedin.com/in/mmaciej/',
+  'https://www.linkedin.com/in/janice-chu-075705284/',
+];
 
 const teammates: Array<TeamMember> = [];
 
@@ -43,7 +55,7 @@ for (let i = 0; i < gitArr.length; i++) {
     firstName: firstArr[i],
     lastName: lastArr[i],
     github: gitArr[i],
-    linkedin: linkArr[i]
+    linkedin: linkArr[i],
   };
   teammates.push(newMember);
 }
@@ -68,14 +80,14 @@ const Contributor = () => {
   // }, []);
 */
 
-// Creating contributors cards
+  // Creating contributors cards
   const svelteSquad: JSX.Element[] = teammates.map((person: TeamMember) => {
     return (
       <Box
-        id='contributor'
-        textAlign='center'
-        className='teammates'
-        width='250px'
+        id="contributor"
+        textAlign="center"
+        className="teammates"
+        width="300px"
         style={{
           background:
             'linear-gradient(150deg, #ffffff47, #f5dede70, rgba(254, 123, 145, 0.32))',
@@ -90,30 +102,31 @@ const Contributor = () => {
           filter: 'grayscale(20%)',
           zIndex: '130',
           marginLeft: '20px',
+          marginTop: '1.5rem'
         }}
       >
         <Box
-          component='img'
+          component="img"
           src={picArr[person.id]}
           style={{ width: '230px', height: '230px', zIndex: '1300' }}
         ></Box>
-        <h2
-          // variant='h2'
-          // color='whitesmoke'
-          // mb='5px'
-          // fontSize='25px'
+        <h5
+        // variant='h2'
+        // color='whitesmoke'
+        // mb='5px'
+        // fontSize='25px'
         >
           {person.firstName} {person.lastName}
-        </h2>
-        <h5
-          // variant='h5'
-          // fontWeight='lighter'
-          // color='whitesmoke'
-          // mb='15px'
-          // fontSize='20px'
+        </h5>
+        <p
+        // variant='h5'
+        // fontWeight='lighter'
+        // color='whitesmoke'
+        // mb='15px'
+        // fontSize='20px'
         >
           Software Engineer
-        </h5>
+        </p>
         <Box
           style={{
             display: 'flex',
@@ -123,8 +136,8 @@ const Contributor = () => {
           }}
         >
           <Box
-            id='link'
-            component='img'
+            id="link"
+            component="img"
             onClick={() => {
               window.open(`${person.linkedin}`);
             }}
@@ -133,8 +146,8 @@ const Contributor = () => {
             sx={{ ':hover': { width: '10px' } }}
           ></Box>
           <Box
-            id='link'
-            component='img'
+            id="link"
+            component="img"
             onClick={() => {
               window.open(`${person.github}`);
             }}
@@ -148,7 +161,7 @@ const Contributor = () => {
 
   return (
     <div
-      id='teamTopDiv'
+      id="teamTopDiv"
       style={{
         display: 'flex',
         flexDirection: 'column',
@@ -159,7 +172,7 @@ const Contributor = () => {
       }}
     >
       <div
-        id='TeamBio'
+        id="TeamBio"
         style={{
           zIndex: '14001',
           flexWrap: 'wrap',
@@ -167,30 +180,30 @@ const Contributor = () => {
           alignItems: 'center',
         }}
       >
-        <h2
-          // variant='h2'
-          // textAlign='center'
-          // style={{
-          //   zIndex: '13006',
-          // }}
-          // sx={{
-          //   fontFamily: 'Hanken Grotesk',
-          //   fontSize: '6.2vw',
-          //   fontWeight: 600,
-          //   letterSpacing: '1px',
-          //   color: 'white',
-          //   textDecoration: 'none',
-          //   mt: 10,
-          //   mb: 9,
-          //   textShadow: '1px 1px 5px rgb(0, 0, 0, 0.5)',
-          // }}
+        <h1
+        // variant='h2'
+        // textAlign='center'
+        // style={{
+        //   zIndex: '13006',
+        // }}
+        // sx={{
+        //   fontFamily: 'Hanken Grotesk',
+        //   fontSize: '6.2vw',
+        //   fontWeight: 600,
+        //   letterSpacing: '1px',
+        //   color: 'white',
+        //   textDecoration: 'none',
+        //   mt: 10,
+        //   mb: 9,
+        //   textShadow: '1px 1px 5px rgb(0, 0, 0, 0.5)',
+        // }}
         >
           Meet Our Engineering Team
-        </h2>
+        </h1>
         <Box
-          id='members'
-          justifyContent='center'
-          alignContent='center'
+          id="members"
+          justifyContent="center"
+          alignContent="center"
           style={{ zIndex: '1301' }}
           sx={{
             display: 'flex',

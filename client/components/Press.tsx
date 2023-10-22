@@ -14,7 +14,7 @@ const Press = () => {
           zIndex: '40000',
         }}
       >
-        <h2
+        <h1
           // variant='h2'
           // textAlign='center'
           // style={{
@@ -34,7 +34,7 @@ const Press = () => {
           // }}
         >
           Read About Us
-        </h2>
+        </h1>
         <Box
           id='pressimages'
           sx={{

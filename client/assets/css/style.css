@@ -11,16 +11,6 @@ body {
   width: 100vw;
 }
 
-h1 {
-  font-size: 2rem;
-  color: white;
-}
-
-p {
-  font-size: 1rem;
-  color: white;
-}
-
 input,
 .loginButton {
   display: flex;
