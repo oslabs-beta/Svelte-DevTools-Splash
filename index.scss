@@ -1,5 +1,4 @@
 html {
-  // height: 100%;
   padding-top: 110px;
 }
 
@@ -58,21 +57,58 @@ body {
   height: 100%;
 }
 
-
-.MuiTypography-h2 {
-  font-family: 'Hanken Grotesk';
-  font-size: 30;
-  font-weight: 800;
-  letter-spacing: 1px;
-  color: 'white';
-  text-decoration: none;
-  margin-top: 0;
-  margin-bottom: 10;
-  z-index: '130';
-  text-shadow: 1px 1px 5px rgb(0, 0, 0, 0.4);
+.feature {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  margin-top: 100px;
+  z-index: 130;
 }
 
-.MuiTypography-h4 {
+.feature-mirror {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  margin-top: 100px;
+  z-index: 130;
+}
+
+#features-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: 'center';
+  margin-top: 6rem;
+}
+
+h1 {
+  text-shadow: '2px 2px 10px rgb(0, 0, 0, 0.5)';
+  font-family: 'Hanken Grotesk';
+  font-size: 85;
+  font-weight: 'normal';
+  letter-spacing: '0px';
+  color: '#f5f5f5';
+  text-decoration: 'none';
+  margin-bottom: 3;
+  z-index: '130';
+}
+
+h2 {
+  font-family: 'Hanken Grotesk';
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px 5px rgb(0, 0, 0, 0.4);
+  z-index: 40000;
+}
+
+h4 {
   font-family: 'Hanken Grotesk';
   font-weight: 800;
   font-size: 2vw;
@@ -85,71 +121,82 @@ body {
   text-shadow: 1px 1px 5px rgb(0, 0, 0, 0.4);
 }
 
-.MuiTypography-h5 {
-    font-family: 'Hanken Grotesk';
-    font-weight: 50;
-    font-size: 1.5vw;
-    letter-spacing: 0.1 rem;
-    color: white;
-    text-decoration: none;
-    margin-top: 3;
-    margin-bottom: 15;
-    align-content: center;
-    text-align: center;
-    text-shadow: 1px 1px 5px rgb(0, 0, 0, 0.3);
+h5 {
+  font-family: 'Hanken Grotesk';
+  font-size: 1.5vw;
+  letter-spacing: 0.1rem;
+  color: white;
+  text-decoration: none;
+  margin-top: 3px;
+  margin-bottom: 15px;
+  align-content: center;
+  text-align: center;
+  text-shadow: 1px 1px 5px rgb(0, 0, 0, 0.3);
+  font-weight: 100;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+}
+
+.image {
+  width: '800px';
+  margin-bottom: 6px;
+  margin-right: 8px;
+  margin-left: 5px;
+  align-items: center;
+  justify-content: center;
+  z-index: 1301;
+  border: 1px;
+  border-radius: 2%;
+  background-color: black;
+  box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, 0.1);
+}
+.image:hover {
+  box-shadow: 0px 0px 17px 17px rgb(255, 62, 0, 0.5);
 }
 
 @media only screen and (max-width: 1100px) {
-
-  .MuiTypography-h4 {
-    font-size: 2rem !important;
+  h4 {
+    font-size: 2rem;
   }
 
-  .MuiTypography-h5 {
-    font-size: 1rem !important;
+  h5 {
+    font-size: 1rem;
   }
 
   .feature {
-    align-items: center !important;
-    align-content: center !important;
-    margin-bottom: 10 !important;
-    margin-top: 0 !important;
-    z-index: 130 !important;
-    margin-right: 0 !important;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 10;
+    margin-top: 0;
+    z-index: 130;
+    margin-right: 0;
   }
 
-  .titles {
-    text-align: center !important;
-    font-weight: 800 !important;
-    letter-spacing: 2px !important;
-    color: white !important;
-    text-decoration: none !important;
-    z-index: 130 !important;
-    margin-right: 0 !important;
-    margin-left: 5% !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-shadow: 1px 1px 5px rgb(0, 0, 0, 0.4) !important;
-  }
+  // .titles {
+  //   text-align: center;
+  //   font-weight: 800;
+  //   letter-spacing: 2px;
+  //   color: white;
+  //   text-decoration: none;
+  //   z-index: 130;
+  //   margin-right: 0;
+  //   margin-left: 5%;
+  //   justify-content: center;
+  //   align-items: center;
+  //   text-shadow: 1px 1px 5px rgb(0, 0, 0, 0.4);
+  // }
 
-  .blurbs
-  .blurbs2 {
-    font-weight: 50 !important;;
-    font-size: 1.8rem !important;;
-    letter-spacing: 0.1 rem !important;;
-  }
-  .blurbs {
-    margin-left: 8% !important;;
-    margin-right: 3% !important;;
-  }
+  // .blurbs {
+  //   margin-left: 8%;
+  //   margin-right: 3%;
+  //   font-weight: 50;
+  //   font-size: 1.8rem;
+  //   letter-spacing: 0.1rem;
+  // }
 
-  .blurbs2 {
-    margin-left: 7% !important;;
-    margin-right: 7% !important;;
-  }
-
-  .image{
-    width: 90% !important;
+  .image {
+    width: 90%;
   }
 
   #pressimages {

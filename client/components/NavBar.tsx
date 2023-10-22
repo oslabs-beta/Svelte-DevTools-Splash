@@ -30,7 +30,6 @@ const Navbar: React.FC = () => {
             background: '#000000',
           }}
         >
-          Í
           <Box sx={{ display: 'flex', alignItems: 'center', ml: '20px' }}>
             <span style={{ color: 'inherit', fontSize: '32px' }}>
               Svelte DevTools+

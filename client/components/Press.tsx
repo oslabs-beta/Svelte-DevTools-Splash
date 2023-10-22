@@ -1,5 +1,3 @@
-import React from 'react';
-import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 const productHuntLogo = require('../assets/productHuntLogo.png');
 const MediumLogo = require('../assets/MediumLogo.png');
@@ -16,27 +14,27 @@ const Press = () => {
           zIndex: '40000',
         }}
       >
-        <Typography
-          variant='h2'
-          textAlign='center'
-          style={{
-            zIndex: '34016',
-          }}
-          sx={{
-            fontFamily: 'Hanken Grotesk',
-            fontSize: '6.2vw',
-            fontWeight: 600,
-            letterSpacing: '1px',
-            color: 'white',
-            textDecoration: 'none',
-            mt: 20,
-            mb: 9,
-            zIndex: '34016',
-            textShadow: '1px 1px 5px rgb(0, 0, 0, 0.5)',
-          }}
+        <h2
+          // variant='h2'
+          // textAlign='center'
+          // style={{
+          //   zIndex: '34016',
+          // }}
+          // sx={{
+          //   fontFamily: 'Hanken Grotesk',
+          //   fontSize: '6.2vw',
+          //   fontWeight: 600,
+          //   letterSpacing: '1px',
+          //   color: 'white',
+          //   textDecoration: 'none',
+          //   mt: 20,
+          //   mb: 9,
+          //   zIndex: '34016',
+          //   textShadow: '1px 1px 5px rgb(0, 0, 0, 0.5)',
+          // }}
         >
           Read About Us
-        </Typography>
+        </h2>
         <Box
           id='pressimages'
           sx={{

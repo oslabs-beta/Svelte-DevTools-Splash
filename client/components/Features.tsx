@@ -5,7 +5,6 @@ const StepAndTree = require('../assets/StepAndTree.gif');
 const Inspect = require('../assets/Inspect.gif');
 const Edit = require('../assets/Edit.gif');
 const Dynamic = require('../assets/Dynamic.gif');
-import { Typography } from '@mui/material';
 import Tilt from 'react-parallax-tilt';
 import { browserName } from 'react-device-detect';
 import '../../index.scss';
@@ -16,7 +15,7 @@ const Features = () => {
   if (browserName.includes('Safari')) {
     tilt = false;
   }
-  let dashboardImg = (
+  const dashboardImg = (
     <Tilt
       tiltEnable={tilt}
       tiltMaxAngleX={8}
@@ -31,28 +30,13 @@ const Features = () => {
     >
       <Box
         src={StepAndTree}
-        alt='Screenshot of Svelte DevTools+ displaying a visual component hierarchy in a step-like or tree-like structure'
-        component='img'
-        className='image'
-        sx={{
-          width: '800px',
-          mb: 6,
-          mr: 8,
-          alignItems: 'center',
-          justifyContent: 'center',
-          zIndex: '1301',
-          border: '1px',
-          borderRadius: '2%',
-          bgcolor: 'black',
-          boxShadow: '0px 0px 5px 5px rgb(0, 0, 0, 0.1)',
-          ':hover': {
-            boxShadow: '0px 0px 17px 17px rgb(255, 62, 0, 0.5)',
-          },
-        }}
+        alt="Screenshot of Svelte DevTools+ displaying a visual component hierarchy in a step-like or tree-like structure"
+        component="img"
+        className="image"
       ></Box>
     </Tilt>
   );
-  let setupImg = (
+  const setupImg = (
     <Tilt
       tiltEnable={tilt}
       tiltMaxAngleX={8}
@@ -69,24 +53,8 @@ const Features = () => {
       <Box
         src={Dynamic}
         alt="Screenshot of Svelte DevTools+ displaying real-time changes in a component's state and props"
-        component='img'
-        className='image'
-        sx={{
-          width: '800px',
-          mb: 6,
-          ml: 1,
-          mr: 5,
-          alignItems: 'center',
-          justifyContent: 'center',
-          zIndex: '1301',
-          border: '1px',
-          borderRadius: '2%',
-          bgcolor: 'black',
-          boxShadow: '0px 0px 5px 5px rgb(0, 0, 0, 0.1)',
-          ':hover': {
-            boxShadow: '0px 0px 17px 17px rgb(255, 62, 0, 0.5)',
-          },
-        }}
+        component="img"
+        className="image"
       ></Box>
     </Tilt>
   );
@@ -107,24 +75,8 @@ const Features = () => {
       <Box
         src={Inspect}
         alt="Screenshot of Svelte DevTools+ displaying a visual component tree, inspecting component's props, states and context"
-        component='img'
-        className='image'
-        sx={{
-          width: '800px',
-          mb: 6,
-          mr: 8,
-          ml: 5,
-          alignItems: 'center',
-          justifyContent: 'center',
-          zIndex: '1301',
-          border: '1px',
-          borderRadius: '2%',
-          bgcolor: 'black',
-          boxShadow: '0px 0px 5px 5px rgb(0, 0, 0, 0.1)',
-          ':hover': {
-            boxShadow: '0px 0px 17px 17px rgb(255, 62, 0, 0.5)',
-          },
-        }}
+        component="img"
+        className="image"
       ></Box>
     </Tilt>
   );
@@ -145,28 +97,12 @@ const Features = () => {
       <Box
         src={Dynamic}
         alt="Screenshot of a time-travel debugging feature to inspect the application's state at different points in time and analyze state changes"
-        component='img'
-        className='image'
-        sx={{
-          width: '800px',
-          mb: 6,
-          msLineBreak: 8,
-          mr: 10,
-          alignItems: 'center',
-          justifyContent: 'center',
-          zIndex: '1301',
-          border: '1px',
-          borderRadius: '2%',
-          bgcolor: 'black',
-          boxShadow: '0px 0px 5px 5px rgb(0, 0, 0, 0.1)',
-          ':hover': {
-            boxShadow: '0px 0px 17px 17px rgb(255, 62, 0, 0.5)',
-          },
-        }}
+        component="img"
+        className="image"
       ></Box>
     </Tilt>
   );
-  let helpdeskImg = (
+  let helpDeskImg = (
     <Tilt
       tiltEnable={tilt}
       tiltMaxAngleX={8}
@@ -181,32 +117,16 @@ const Features = () => {
     >
       <Box
         src={Edit}
-        alt='Screenshot of modifying the state and props of a selected component directly from Svelte DevTools+ for testing and debugging'
-        component='img'
-        className='image'
-        sx={{
-          width: '800px',
-          mb: 6,
-          ml: 8,
-          mr: 10,
-          alignItems: 'center',
-          justifyContent: 'center',
-          zIndex: '1301',
-          border: '1px',
-          borderRadius: '2%',
-          bgcolor: 'black',
-          boxShadow: '0px 0px 5px 5px rgb(0, 0, 0, 0.1)',
-          ':hover': {
-            boxShadow: '0px 0px 17px 17px rgb(255, 62, 0, 0.5)',
-          },
-        }}
+        alt="Screenshot of modifying the state and props of a selected component directly from Svelte DevTools+ for testing and debugging"
+        component="img"
+        className="image"
       ></Box>
     </Tilt>
   );
 
   return (
-    <Grid id='features'>
-      <Box id='button container' width='100%'>
+    <Grid id="features">
+      <Box id="button container" width="100%">
         <Box
           sx={{
             display: 'flex',
@@ -217,10 +137,10 @@ const Features = () => {
           }}
         >
           <Box
-            id='buttonsDL'
-            component='img'
+            id="buttonsDL"
+            component="img"
             src={googleWebStorePng}
-            alt='Google Chrome Web Store icon'
+            alt="Google Chrome Web Store icon"
             onClick={() =>
               window.open(
                 'https://chrome.google.com/webstore/detail/svelte-devtools%2B/bgelkjgjabbfoeiicgoddeadicoofcfk?hl=en-GB'
@@ -236,275 +156,86 @@ const Features = () => {
           ></Box>
         </Box>
       </Box>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          zIndex: '40000',
-          marginTop: '80px',
-        }}
-      >
-        <Typography
-          variant='h2'
-          textAlign='center'
-          sx={{
-            // fontFamily: 'Hanken Grotesk',
-            // fontSize: 30,
-            // fontWeight: 800,
-            // letterSpacing: '1px',
-            // color: 'white',
-            // textDecoration: 'none',
-            // mt: 0,
-            // mb: 10,
-            // zIndex: '130',
-            // textShadow: '1px 1px 5px rgb(0, 0, 0, 0.4)',
-          }}
-        >
-          FEATURING:
-        </Typography>
+      <div id="features-header">
+        <h2>
+          FEATURING
+        </h2>
       </div>
-      <div id='featuresDiv' style={{ marginLeft: '15px' }}>
-        <Box
-          className='feature'
-          style={{
-            display: 'flex',
-            flexDirection: 'row-reverse',
-            justifyContent: 'space-evenly',
-            alignItems: 'flex-start',
-            alignContent: 'center',
-            marginBottom: 0,
-            marginTop: '100',
-            zIndex: '130',
-          }}
-        >
-          <Box
-            sx={{
-              width: '100%',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-around',
-              alignItems: 'center',
-              zIndex: '130',
-              marginRight: '5%',
-
-              marginTop: '4.5%',
-            }}
-          >
-            <Typography
-              className='titles'
-              variant='h4'
-            >
+      <div id="featuresDiv" style={{ marginLeft: '15px' }}>
+        <Box className="feature">
+          <Box>
+            <h4>
               DYNAMIC COMPONENT VISUALIZATION
-            </Typography>
-            <Typography
-              className='blurbs'
-              variant='h5'
-            >
+            </h4>
+            <h5>
               Svelte DevTools+ allows developers to inspect the component
-              hierarchy of a Svelte application in either a step-like or
-              tree-like structure
+              hierarchy of a Svelte application
               <br></br>
               <br></br>
-              Our DevTool provides a visual representation of how components are
+              It provides a visual representation of how components are
               nested inside each other, making it easier to understand the
               application's structure
-            </Typography>
+            </h5>
           </Box>
           {dashboardImg}
         </Box>
-        <Box
-          className='feature'
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-evenly',
-            alignItems: 'center',
-            alignContent: 'center',
-            marginBottom: 0,
-            marginTop: '100px',
-            zIndex: '130',
-          }}
-        >
-          <Box
-            sx={{
-              width: '100%',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-around',
-              alignItems: 'center',
-              alignText: 'center',
-              zIndex: '130',
-              marginLeft: '3%',
-              marginTop: '4.2%',
-            }}
-          >
-            <Typography
-              className='titles'
-              variant='h4'
-            >
+        <Box className="feature-mirror">
+          <Box>
+            <h4>
               REAL-TIME STATE AND PROPS UPDATES
-            </Typography>
-            <Typography
-              className='blurbs2'
-              variant='h5'
-            >
+            </h4>
+            <h5>
               Svelte DevTools+ allows developers to see the real-time changes in
               a component's state and props, immediately reflecting updates in
               the DevTool and allowing for simple tracking of the application's
               behavior
-            </Typography>
+            </h5>
           </Box>
           {setupImg}
         </Box>
-        <Box
-          className='feature'
-          style={{
-            display: 'flex',
-            flexDirection: 'row-reverse',
-            justifyContent: 'space-evenly',
-            alignItems: 'flex-start',
-            alignContent: 'center',
-            marginBottom: 40,
-            marginTop: '100px',
-            zIndex: '130',
-          }}
-        >
-          <Box
-            sx={{
-              width: '100%',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-around',
-              alignItems: 'center',
-              zIndex: '130',
-              marginRight: '5%',
-
-              marginTop: '6%',
-            }}
-          >
-            <Typography
-              className='titles'
-              variant='h4'
-            >
+        <Box className="feature">
+          <Box>
+            <h4>
               COMPONENT INSPECTION
-            </Typography>
-            <Typography
-              className='blurbs'
-              variant='h5'
-            >
+            </h4>
+            <h5>
               When selecting a component in the DevTools component tree,
               developers can inspect the component's props, state, and context
               to aid in understanding the data and values that are passed to
               each component
-            </Typography>
+            </h5>
           </Box>
           {metricsImg}
         </Box>
 
-        <Box
-          className='feature'
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-evenly',
-            alignItems: 'center',
-            alignContent: 'center',
-            marginBottom: 0,
-            marginTop: '80px',
-            zIndex: '130',
-          }}
-        >
-          <Box
-            sx={{
-              width: '100%',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-around',
-              alignItems: 'center',
-              alignText: 'center',
-              zIndex: '130',
-              marginLeft: '3%',
-              marginTop: '4.2%',
-            }}
-          >
-            <Typography
-              className='titles'
-              variant='h4'
-            >
+        <Box className="feature-mirror">
+          <Box>
+            <h4>
               COMPONENT STATE MODIFICATION
-            </Typography>
-            <Typography
-              className='blurbs2'
-              variant='h5'
-            >
+            </h4>
+            <h5>
               Developers can modify the state and props of a selected component
               directly from the DevTools for testing and debugging purposes
               <br></br>
               <br></br>
               This can be helpful in experimenting with different scenarios
               without modifying the actual code
-            </Typography>
+            </h5>
           </Box>
-          {helpdeskImg}
+          {helpDeskImg}
         </Box>
 
-        <Box
-          className='feature'
-          style={{
-            display: 'flex',
-            flexDirection: 'row-reverse',
-            justifyContent: 'space-evenly',
-            alignItems: 'flex-start',
-            alignContent: 'center',
-            marginBottom: 0,
-            marginTop: '100px',
-            zIndex: '130',
-          }}
-        >
-          <Box
-            sx={{
-              width: '100%',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-around',
-              alignItems: 'center',
-              zIndex: '130',
-              marginRight: '5%',
-
-              marginTop: '6%',
-            }}
-          >
-            <Typography
-              className='titles'
-              variant='h4'
-            >
+        <Box className="feature">
+          <Box>
+            <h4>
               STATE REWIND
-            </Typography>
-            <Typography
-              className='blurbs'
-              variant='h5'
-              // sx={{
-              //   fontFamily: 'Hanken Grotesk',
-              //   fontWeight: 50,
-              //   fontSize: '1.5vw',
-              //   letterSpacing: '.1 rem',
-              //   color: 'white',
-              //   textDecoration: 'none',
-              //   mt: 3,
-              //   mb: 15,
-              //   alignContent: 'center',
-
-              //   textAlign: 'center',
-              //   textShadow: '1px 1px 5px rgb(0, 0, 0, 0.3)',
-              // }}
-            >
+            </h4>
+            <h5>
               Svelte DevTools+ provides a time-travel debugging feature that
               enables developers to inspect the application's state at different
-              points in time and anlayze how the state of the application
+              points in time and analyze how the state of the application
               changes
-            </Typography>
+            </h5>
           </Box>
           {lightmodeImg}
         </Box>

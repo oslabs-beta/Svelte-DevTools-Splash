@@ -1,4 +1,4 @@
-import { Typography, Box } from '@mui/material';
+import { Box } from '@mui/material';
 const linkedInPng = require('../assets/linkedIn.svg');
 const githubPng = require('../assets/github.svg');
 const maciej = require('../assets/MaciejPng.png');
@@ -17,6 +17,7 @@ const styles = {
     marginTop: '10px',
     zIndex: '1310',
     display: 'flex',
+    cursor: 'pointer'
   },
 };
 
@@ -26,7 +27,6 @@ type TeamMember = {
   lastName: string;
   github: string;
   linkedin: string;
-  // photo: string;
 };
 
 const picArr = [francis, alex, laura, maciej, janice];
@@ -97,23 +97,23 @@ const Contributor = () => {
           src={picArr[person.id]}
           style={{ width: '230px', height: '230px', zIndex: '1300' }}
         ></Box>
-        <Typography
-          variant='h2'
-          color='whitesmoke'
-          mb='5px'
-          fontSize='25px'
+        <h2
+          // variant='h2'
+          // color='whitesmoke'
+          // mb='5px'
+          // fontSize='25px'
         >
           {person.firstName} {person.lastName}
-        </Typography>
-        <Typography
-          variant='h5'
-          fontWeight='lighter'
-          color='whitesmoke'
-          mb='15px'
-          fontSize='20px'
+        </h2>
+        <h5
+          // variant='h5'
+          // fontWeight='lighter'
+          // color='whitesmoke'
+          // mb='15px'
+          // fontSize='20px'
         >
           Software Engineer
-        </Typography>
+        </h5>
         <Box
           style={{
             display: 'flex',
@@ -167,26 +167,26 @@ const Contributor = () => {
           alignItems: 'center',
         }}
       >
-        <Typography
-          variant='h2'
-          textAlign='center'
-          style={{
-            zIndex: '13006',
-          }}
-          sx={{
-            fontFamily: 'Hanken Grotesk',
-            fontSize: '6.2vw',
-            fontWeight: 600,
-            letterSpacing: '1px',
-            color: 'white',
-            textDecoration: 'none',
-            mt: 10,
-            mb: 9,
-            textShadow: '1px 1px 5px rgb(0, 0, 0, 0.5)',
-          }}
+        <h2
+          // variant='h2'
+          // textAlign='center'
+          // style={{
+          //   zIndex: '13006',
+          // }}
+          // sx={{
+          //   fontFamily: 'Hanken Grotesk',
+          //   fontSize: '6.2vw',
+          //   fontWeight: 600,
+          //   letterSpacing: '1px',
+          //   color: 'white',
+          //   textDecoration: 'none',
+          //   mt: 10,
+          //   mb: 9,
+          //   textShadow: '1px 1px 5px rgb(0, 0, 0, 0.5)',
+          // }}
         >
           Meet Our Engineering Team
-        </Typography>
+        </h2>
         <Box
           id='members'
           justifyContent='center'
