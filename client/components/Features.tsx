@@ -159,21 +159,17 @@ const Features = () => {
       <div id="features-header">
         <h2>FEATURING</h2>
       </div>
-      <div id="features-content" >
+      <div id="features-content">
         <Box className="feature">
           <Box className="feature-description">
             <h4>DYNAMIC COMPONENT VISUALIZATION</h4>
             <p>
               Svelte DevTools+ allows developers to inspect the component
-              hierarchy of a Svelte application
-            </p>
-            <p>
-              It provides a visual representation of how components are nested
-              inside each other, making it easier to understand the
-              application's structure
+              hierarchy of a Svelte application, making it easier to understand
+              the application's structure
             </p>
           </Box>
-          {dashboardImg}
+          <div className="screenshot">{dashboardImg}</div>
         </Box>
         <Box className="feature-mirror">
           <Box className="feature-description">
@@ -185,7 +181,7 @@ const Features = () => {
               behavior
             </p>
           </Box>
-          {setupImg}
+          <div className="screenshot">{setupImg}</div>
         </Box>
         <Box className="feature">
           <Box className="feature-description">
@@ -197,7 +193,7 @@ const Features = () => {
               each component
             </p>
           </Box>
-          {metricsImg}
+          <div className="screenshot">{metricsImg}</div>
         </Box>
 
         <Box className="feature-mirror">
@@ -205,13 +201,13 @@ const Features = () => {
             <h4>COMPONENT STATE MODIFICATION</h4>
             <p>
               Developers can modify the state and props of a selected component
-              directly from the DevTools for testing and debugging purposes, making it easy to experiment with different scenarios
+              directly from the DevTools window for testing and debugging
+              purposes, making it easy to experiment with different scenarios
               without modifying your code
             </p>
           </Box>
-          {helpDeskImg}
+          <div className="screenshot">{helpDeskImg}</div>
         </Box>
-
         <Box className="feature">
           <Box className="feature-description">
             <h4>STATE REWIND</h4>
@@ -222,7 +218,7 @@ const Features = () => {
               changes
             </p>
           </Box>
-          {lightmodeImg}
+          <div className="screenshot">{lightmodeImg}</div>
         </Box>
       </div>
     </Grid>

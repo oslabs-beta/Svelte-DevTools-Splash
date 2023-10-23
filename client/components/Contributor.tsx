@@ -83,50 +83,16 @@ const Contributor = () => {
   // Creating contributors cards
   const svelteSquad: JSX.Element[] = teammates.map((person: TeamMember) => {
     return (
-      <Box
-        id="contributor"
-        textAlign="center"
-        className="teammates"
-        width="300px"
-        style={{
-          background:
-            'linear-gradient(150deg, #ffffff47, #f5dede70, rgba(254, 123, 145, 0.32))',
-          borderRadius: '16px',
-          boxShadow: '0 4px 30px #0000001a',
-          backdropFilter: 'blur(7.9px)',
-          WebkitBackdropFilter: 'blur(7.9px)',
-          border: '1px solid rgba(255, 255, 255, 0.18)',
-          paddingTop: '1.5rem',
-          WebkitFilter: 'grayscale(20%)',
-          minWidth: '150px',
-          filter: 'grayscale(20%)',
-          zIndex: '130',
-          marginLeft: '20px',
-          marginTop: '1.5rem'
-        }}
-      >
+      <Box className="contributor" style={{}}>
         <Box
           component="img"
           src={picArr[person.id]}
           style={{ width: '230px', height: '230px', zIndex: '1300' }}
         ></Box>
-        <h5
-        // variant='h2'
-        // color='whitesmoke'
-        // mb='5px'
-        // fontSize='25px'
-        >
+        <h5>
           {person.firstName} {person.lastName}
         </h5>
-        <p
-        // variant='h5'
-        // fontWeight='lighter'
-        // color='whitesmoke'
-        // mb='15px'
-        // fontSize='20px'
-        >
-          Software Engineer
-        </p>
+        <p>Software Engineer</p>
         <Box
           style={{
             display: 'flex',
@@ -180,26 +146,7 @@ const Contributor = () => {
           alignItems: 'center',
         }}
       >
-        <h1
-        // variant='h2'
-        // textAlign='center'
-        // style={{
-        //   zIndex: '13006',
-        // }}
-        // sx={{
-        //   fontFamily: 'Hanken Grotesk',
-        //   fontSize: '6.2vw',
-        //   fontWeight: 600,
-        //   letterSpacing: '1px',
-        //   color: 'white',
-        //   textDecoration: 'none',
-        //   mt: 10,
-        //   mb: 9,
-        //   textShadow: '1px 1px 5px rgb(0, 0, 0, 0.5)',
-        // }}
-        >
-          Meet Our Engineering Team
-        </h1>
+        <h1>Meet Our Engineering Team</h1>
         <Box
           id="members"
           justifyContent="center"
