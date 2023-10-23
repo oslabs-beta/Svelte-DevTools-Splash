@@ -1,7 +1,6 @@
 import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
 import { Grid, Button } from '@mui/material';
 
 const scrollToSection = (selector: string) => {
@@ -12,8 +11,8 @@ const scrollToSection = (selector: string) => {
 };
 
 const buttonStyles = {
+  fontSize: '1rem',
   marginRight: '20px',
-  fontSize: '18px',
   ':hover': {
     backgroundColor: '#ff5e00',
     color: 'white',
@@ -24,22 +23,13 @@ const Navbar: React.FC = () => {
   return (
     <Grid id="nav-bar">
       <Box>
-        <AppBar
-          id="app-bar"
-          style={{
-            background: '#000000',
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            zIndex: '35000',
-          }}
-        >
-          <Box sx={{ display: 'flex', alignItems: 'center', ml: '20px' }}>
+        <AppBar id="app-bar">
+          <div id="title">
             <span style={{ color: 'inherit', fontSize: '32px' }}>
               Svelte DevTools+
             </span>
-          </Box>
-          <Toolbar>
+          </div>
+          <div id="tool-bar">
             {[
               { label: 'Extension', selector: '#logo' },
               { label: 'Features', selector: '#features' },
@@ -63,7 +53,7 @@ const Navbar: React.FC = () => {
             >
               Github
             </Button>
-          </Toolbar>
+          </div>
         </AppBar>
       </Box>
     </Grid>

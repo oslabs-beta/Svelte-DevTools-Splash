@@ -15,7 +15,6 @@ const styles = {
     marginRight: '10px',
     marginBottom: '30px',
     marginTop: '10px',
-    zIndex: '1310',
     display: 'flex',
     cursor: 'pointer',
   },
@@ -87,7 +86,7 @@ const Contributor = () => {
         <Box
           component="img"
           src={picArr[person.id]}
-          style={{ width: '230px', height: '230px', zIndex: '1300' }}
+          style={{ width: '230px', height: '230px'}}
         ></Box>
         <h5>
           {person.firstName} {person.lastName}
@@ -98,7 +97,6 @@ const Contributor = () => {
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'center',
-            zIndex: '130',
           }}
         >
           <Box
@@ -133,14 +131,12 @@ const Contributor = () => {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        zIndex: '40000',
         marginBottom: '150px',
       }}
     >
       <div
         id="TeamBio"
         style={{
-          zIndex: '14001',
           flexWrap: 'wrap',
           justifyContent: 'center',
           alignItems: 'center',
@@ -151,7 +147,6 @@ const Contributor = () => {
           id="members"
           justifyContent="center"
           alignContent="center"
-          style={{ zIndex: '1301' }}
           sx={{
             display: 'flex',
             flexDirection: 'row',
@@ -159,7 +154,6 @@ const Contributor = () => {
             flexWrap: 'wrap',
             alignItems: 'flex-start',
             mb: 10,
-            zIndex: '130',
           }}
         >
           {svelteSquad}

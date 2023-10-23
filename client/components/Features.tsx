@@ -87,7 +87,6 @@ const Features = () => {
               width: '90px',
               height: '90px',
               paddingTop: '5px',
-              zIndex: '130',
               cursor: 'pointer',
             }}
           ></Box>
@@ -111,9 +110,6 @@ const Features = () => {
                   tiltMaxAngleX={8}
                   tiltMaxAngleY={8}
                   tiltReverse={true}
-                  style={{
-                    width: '100%',
-                  }}
                 >
                   <img src={feature.image} alt={feature.alt}></img>
                 </Tilt>

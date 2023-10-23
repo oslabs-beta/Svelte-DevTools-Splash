@@ -4,14 +4,13 @@ const MediumLogo = require('../assets/MediumLogo.png');
 
 const Press = () => {
   return (
-    <div id="press" style={{ zIndex: '14009', paddingTop: '60px' }}>
+    <div id="press" style={{ paddingTop: '60px' }}>
       <div
         style={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          zIndex: '40000',
         }}
       >
         <h1>Read About Us</h1>
@@ -36,7 +35,6 @@ const Press = () => {
             }
             sx={{
               width: '45%',
-              zIndex: '3410',
               mb: '60px',
               ':hover': 'pointer',
             }}
@@ -51,8 +49,6 @@ const Press = () => {
             }
             sx={{
               width: '45%',
-
-              zIndex: '3410',
               mb: '60px',
               ':hover': 'pointer',
             }}

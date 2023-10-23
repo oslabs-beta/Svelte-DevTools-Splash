@@ -46,7 +46,6 @@ const MainHeader = () => {
                 alignContent: 'center',
                 height: '300px',
                 width: '300px',
-                zIndex: '130',
                 padding: '4rem',
               }}
               component="img"

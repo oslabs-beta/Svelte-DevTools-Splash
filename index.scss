@@ -4,6 +4,22 @@ html {
 
 #tsparticles { 
   opacity: 0.4;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+}
+
+#app-bar {
+  padding: 0.75rem;
+  background: #000000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#title {
+  margin-left: 1rem;
 }
 
 body {
@@ -65,6 +81,9 @@ body {
   width: 90%;
   margin: 0 auto;
 }
+#mini-toolbar {
+  display: none;
+}
 
 .feature {
   display: flex;
@@ -73,7 +92,6 @@ body {
   align-items: center;
   margin-bottom: 5rem;
   align-content: center;
-  z-index: 130;
 }
 
 .feature-mirror {
@@ -83,7 +101,6 @@ body {
   align-items: center;
   align-content: center;
   margin-bottom: 5rem;
-  z-index: 130;
 }
 
 #features-header {
@@ -106,7 +123,6 @@ h1 {
   text-decoration: none;
   margin-top: 0;
   margin-bottom: 1rem;
-  z-index: 130;
   color: white;
 }
 
@@ -118,7 +134,6 @@ h2 {
   color: white;
   text-decoration: none;
   text-shadow: 1px 1px 5px rgb(0, 0, 0, 0.4);
-  z-index: 0;
 }
 
 h3 {
@@ -130,7 +145,6 @@ h3 {
   text-decoration: none;
   margin-top: 1px;
   margin-bottom: 2px;
-  z-index: 130;
   text-shadow: 1px 1px 5px rgb(0, 0, 0, 0.3);
 }
 
@@ -143,7 +157,6 @@ h4 {
   text-decoration: none;
   align-items: center;
   text-align: center;
-  z-index: 130;
   text-shadow: 1px 1px 5px rgb(0, 0, 0, 0.4);
 }
 
@@ -154,7 +167,6 @@ h5 {
   letter-spacing: 0.1 rem;
   color: white;
   text-decoration: none;
-  z-index: 130;
   text-shadow: 1px 1px 5px rgb(0, 0, 0, 0.3);
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -196,7 +208,6 @@ p {
   -webkit-filter: grayscale(20%);
   min-width: 150px;
   filter: grayscale(20%);
-  z-index: 130;
   margin-left: 20px;
   margin-top: 1.5rem;
   text-align: center;
@@ -215,7 +226,6 @@ p {
   margin-left: 5px;
   align-items: center;
   justify-content: center;
-  z-index: 1301;
   border: 1px;
   border-radius: 2%;
   background-color: black;
@@ -239,13 +249,12 @@ p {
   }
 
   .feature-description {
-    width: 100%;
-
+    width: auto;
   }
 
-.screenshot {
-  width: 100%;
-}
+  .screenshot {
+    width: auto;
+  }
 
   // h4 {
   //   font-size: 2rem;
@@ -260,7 +269,6 @@ p {
   //   align-content: center;
   //   margin-bottom: 10;
   //   margin-top: 0;
-  //   z-index: 130;
   //   margin-right: 0;
   // }
 
@@ -274,41 +282,34 @@ p {
     margin-bottom: 15;
   }
 
-  // #members {
-  //   z-index: 40000;
-  //   display: flex;
-  //   overflow: auto;
-  //   align-items: center;
-  //   flex-direction: column;
-  //   flex-wrap: 'wrap';
-  // }
-
   #MediumArticle {
+    cursor: pointer;
     width: 70%;
   }
 
   #ProductHuntArticle {
+    cursor: pointer;
     width: 70%;
   }
-
-  #MediumArticle:hover {
-    cursor: pointer;
-  }
-
-
-}
-
-@media only screen and (max-width: 720px) {
   #app-bar {
-    font-size: 10px;
-  }
-
-  #app-bar {
-    font-size: 10px;
+    display: block;
   }
 
   #press {
     padding-top: 0;
     margin-top: 0;
   }
+
+  #title {
+    text-align: center;
+  }
+
+  #tool-bar {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+
+
 }

@@ -38,10 +38,8 @@ const HomePage = () => {
       <Press />
       <Contributor />
       <Particles
-        id='tsparticles'
         init={particlesInit}
         loaded={particlesLoaded}
-        style={{ zIndex: '-20000000', position: 'fixed' }}
         options={{
           fpsLimit: 120,
           interactivity: {

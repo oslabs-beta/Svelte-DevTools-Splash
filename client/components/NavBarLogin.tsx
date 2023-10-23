@@ -17,7 +17,6 @@ const NavbarLogin: React.FC = () => {
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'space-between',
-            zIndex: '35000',
           }}
         >
           <Box
