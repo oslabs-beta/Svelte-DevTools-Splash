@@ -142,7 +142,7 @@ const Contributor = () => {
           alignItems: 'center',
         }}
       >
-        <h1>Meet Our Engineering Team</h1>
+        <h2>Meet Our Engineering Team</h2>
         <Box
           id="members"
           justifyContent="center"

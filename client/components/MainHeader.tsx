@@ -38,18 +38,18 @@ const MainHeader = () => {
               alignItems: 'center',
             }}
           >
-            <Box
+            <img
               src={logo}
-              sx={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignContent: 'center',
-                height: '300px',
-                width: '300px',
-                padding: '4rem',
-              }}
-              component="img"
-            ></Box>
+              // sx={{
+              //   display: 'flex',
+              //   flexDirection: 'row',
+              //   alignContent: 'center',
+              //   height: '300px',
+              //   width: '300px',
+              //   padding: '4rem',
+              // }}
+              // component="img"
+            ></img>
           </Box>
           <Box
             id="download"

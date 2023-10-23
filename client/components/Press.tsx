@@ -13,7 +13,7 @@ const Press = () => {
           justifyContent: 'center',
         }}
       >
-        <h1>Read About Us</h1>
+        <h2>Read About Us</h2>
         <Box
           id="press-images"
           sx={{
@@ -21,7 +21,7 @@ const Press = () => {
             flexDirection: 'row',
             justifyContent: 'center',
             width: '85%',
-            mb: 20,
+            mb: 10,
           }}
         >
           <Box
