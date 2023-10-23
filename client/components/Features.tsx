@@ -22,15 +22,14 @@ const featureData = [
   {
     header: `REAL-TIME STATE AND PROPS UPDATES`,
     description: `Svelte DevTools+ allows developers to see the real-time changes in
-    a component's state and props, immediately reflecting updates in
-    the DevTool and allowing for simple tracking of the application's
+    a component's state and props, allowing for simple tracking of the application's
     behavior`,
     alt: `Screenshot of Svelte DevTools+ displaying real-time changes in a component's state and props`,
     image: Dynamic,
   },
   {
     header: `COMPONENT INSPECTION`,
-    description: `When selecting a component in the DevTools component tree,
+    description: `When selecting a component in the component tree,
     developers can inspect the component's props, state, and context
     to aid in understanding the data and values that are passed to
     each component`,
@@ -102,23 +101,21 @@ const Features = () => {
           const className = index % 2 === 0 ? 'feature' : 'feature-mirror';
           return (
             <Box className={className}>
-              <Box className="feature-description">
+              <div className="feature-description">
                 <h4>{feature.header}</h4>
                 <p>{feature.description}</p>
-              </Box>
+              </div>
               <div className="screenshot">
                 <Tilt
                   tiltEnable={tilt}
                   tiltMaxAngleX={8}
                   tiltMaxAngleY={8}
                   tiltReverse={true}
+                  style={{
+                    width: '100%',
+                  }}
                 >
-                  <Box
-                    src={feature.image}
-                    alt={feature.alt}
-                    component="img"
-                    className="image"
-                  ></Box>
+                  <img src={feature.image} alt={feature.alt}></img>
                 </Tilt>
               </div>
             </Box>

@@ -63,7 +63,7 @@ const MainHeader = () => {
           >
             <h1>Svelte DevTools+</h1>
             <h3>Unlock the full power of the Svelte with Svelte DevTools+</h3>
-            <h5 className="orange-text">Go to extension store</h5>
+            <h5 className="orange-text">Go to the extension store</h5>
           </Box>
         </Grid>
       </Box>

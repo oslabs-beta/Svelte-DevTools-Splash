@@ -16,7 +16,7 @@ const Press = () => {
       >
         <h1>Read About Us</h1>
         <Box
-          id="pressimages"
+          id="press-images"
           sx={{
             display: 'flex',
             flexDirection: 'row',
