@@ -1,7 +1,4 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import { Typography } from '@mui/material';
-import Box from '@mui/material/Box';
+import { Box } from '@mui/material';
 const linkedInPng = require('../assets/linkedIn.svg');
 const githubPng = require('../assets/github.svg');
 const maciej = require('../assets/MaciejPng.png');
@@ -18,44 +15,53 @@ const styles = {
     marginRight: '10px',
     marginBottom: '30px',
     marginTop: '10px',
-    zIndex: '1310',
     display: 'flex',
+    cursor: 'pointer',
   },
 };
 
-type PersonObj = {
+type TeamMember = {
   id: number;
-  firstname: string;
-  lastname: string;
+  firstName: string;
+  lastName: string;
   github: string;
   linkedin: string;
-  // photo: string;
 };
 
 const picArr = [francis, alex, laura, maciej, janice];
 const firstArr = ['Francis', 'Alexander', 'Laura', 'Maciej', 'Janice'];
 const lastArr = ['Espinoza', 'Vranas', 'Glass-Johnston', 'Małecki', 'Chu'];
-const gitArr = ['https://github.com/francis8933', 'https://github.com/avranas', 'https://github.com/ellgeejay', 'https://github.com/maciekmalecki/', 'https://github.com/JaniceKZ'];
-const linkArr = ['https://www.linkedin.com/in/espinozafrancis/', 'https://www.linkedin.com/in/avranas/', 'https://www.linkedin.com/in/laura-glass-johnston/', 'https://www.linkedin.com/in/mmaciej/', 'https://www.linkedin.com/in/janice-chu-075705284/'];
+const gitArr = [
+  'https://github.com/francis8933',
+  'https://github.com/avranas',
+  'https://github.com/ellgeejay',
+  'https://github.com/maciekmalecki/',
+  'https://github.com/JaniceKZ',
+];
+const linkArr = [
+  'https://www.linkedin.com/in/espinozafrancis/',
+  'https://www.linkedin.com/in/avranas/',
+  'https://www.linkedin.com/in/laura-glass-johnston/',
+  'https://www.linkedin.com/in/mmaciej/',
+  'https://www.linkedin.com/in/janice-chu-075705284/',
+];
 
-const teammates: Array<PersonObj> = [];
+const teammates: Array<TeamMember> = [];
 
 for (let i = 0; i < gitArr.length; i++) {
-  const newMember: PersonObj = {
+  const newMember: TeamMember = {
     id: i,
-    firstname: firstArr[i],
-    lastname: lastArr[i],
+    firstName: firstArr[i],
+    lastName: lastArr[i],
     github: gitArr[i],
-    linkedin: linkArr[i]
+    linkedin: linkArr[i],
   };
   teammates.push(newMember);
 }
 
 const Contributor = () => {
-  //////////////////////////////////////////////////////
-  ////////Getting Contributors from Database////////////
-  //////////////////////////////////////////////////////
-
+  /*
+    Getting Contributors from Database
   // const [teammates, setTeammates] = useState([]);
 
   // const team = async () => {
@@ -71,69 +77,30 @@ const Contributor = () => {
   // useEffect(() => {
   //   team();
   // }, []);
+*/
 
-  //////////////////////////////////////////////////////
-  ////////////Creating contributors cards///////////////
-  //////////////////////////////////////////////////////
-
-  const teammatesInSvelte: JSX.Element[] = teammates.map((person: PersonObj) => {
+  // Creating contributors cards
+  const svelteSquad: JSX.Element[] = teammates.map((person: TeamMember) => {
     return (
-      <Box
-        id='contributor'
-        textAlign='center'
-        className='teammates'
-        width='250px'
-        style={{
-          background:
-            'linear-gradient(150deg, #ffffff47, #f5dede70, rgba(254, 123, 145, 0.32))',
-          borderRadius: '16px',
-          boxShadow: '0 4px 30px #0000001a',
-          backdropFilter: 'blur(7.9px)',
-          WebkitBackdropFilter: 'blur(7.9px)',
-          border: '1px solid rgba(255, 255, 255, 0.18)',
-          paddingTop: '1.5rem',
-          WebkitFilter: 'grayscale(20%)',
-          minWidth: '150px',
-          filter: 'grayscale(20%)',
-          zIndex: '130',
-          marginLeft: '20px',
-        }}
-      >
+      <Box className="contributor" style={{}}>
         <Box
-          component='img'
+          component="img"
           src={picArr[person.id]}
-          style={{ width: '230px', height: '230px', zIndex: '1300' }}
         ></Box>
-        <Typography
-          variant='h2'
-          color='whitesmoke'
-          mb='5px'
-          fontSize='25px'
-          // textShadow='1px 1px 5px rgb(0, 0, 0, 0.3)'
-        >
-          {person.firstname} {person.lastname}
-        </Typography>
-        <Typography
-          variant='h5'
-          fontWeight='lighter'
-          color='whitesmoke'
-          mb='15px'
-          fontSize='20px'
-          // textShadow='1px 1px 5px rgb(0, 0, 0, 0.3)'
-        >
-          Software Engineer
-        </Typography>
+        <h5>
+          {person.firstName} {person.lastName}
+        </h5>
+        <p>Software Engineer</p>
         <Box
           style={{
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'center',
-            zIndex: '130',
           }}
         >
           <Box
-            id='link'
-            component='img'
+            id="link"
+            component="img"
             onClick={() => {
               window.open(`${person.linkedin}`);
             }}
@@ -142,8 +109,8 @@ const Contributor = () => {
             sx={{ ':hover': { width: '10px' } }}
           ></Box>
           <Box
-            id='link'
-            component='img'
+            id="link"
+            component="img"
             onClick={() => {
               window.open(`${person.github}`);
             }}
@@ -155,57 +122,30 @@ const Contributor = () => {
     );
   });
 
-  //////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////
-
   return (
     <div
-      id='teamTopDiv'
+      id="teamTopDiv"
       style={{
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        zIndex: '40000',
         marginBottom: '150px',
       }}
     >
       <div
-        id='TeamBio'
+        id="TeamBio"
         style={{
-          zIndex: '14001',
-          // width: '800px',
-          // height:"auto",
           flexWrap: 'wrap',
           justifyContent: 'center',
           alignItems: 'center',
         }}
       >
-        <Typography
-          variant='h2'
-          textAlign='center'
-          style={{
-            zIndex: '13006',
-          }}
-          sx={{
-            fontFamily: 'Hanken Grotesk',
-            fontSize: '6.2vw',
-            fontWeight: 600,
-            letterSpacing: '1px',
-            color: 'white',
-            textDecoration: 'none',
-            mt: 10,
-            mb: 9,
-            textShadow: '1px 1px 5px rgb(0, 0, 0, 0.5)',
-          }}
-        >
-          Meet Our Engineering Team
-        </Typography>
+        <h2>Meet Our Engineering Team</h2>
         <Box
-          id='members'
-          justifyContent='center'
-          alignContent='center'
-          style={{ zIndex: '1301' }}
+          id="members"
+          justifyContent="center"
+          alignContent="center"
           sx={{
             display: 'flex',
             flexDirection: 'row',
@@ -213,10 +153,9 @@ const Contributor = () => {
             flexWrap: 'wrap',
             alignItems: 'flex-start',
             mb: 10,
-            zIndex: '130',
           }}
         >
-          {teammatesInSvelte}
+          {svelteSquad}
         </Box>
       </div>
     </div>

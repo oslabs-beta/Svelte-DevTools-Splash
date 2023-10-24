@@ -7,18 +7,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
-}
-
-h1 {
-  font-size: 2rem;
-  color: white;
-}
-
-p {
-  font-size: 1rem;
-  color: white;
+  /* height: 100vh;
+  width: 100vw; */
 }
 
 input,

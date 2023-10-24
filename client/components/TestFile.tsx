@@ -30,7 +30,6 @@ function useRaisedShadow(value: MotionValue<number>) {
   return boxShadow;
 }
 
-
 interface Props {
   item: string;
 }
