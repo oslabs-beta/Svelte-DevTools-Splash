@@ -86,7 +86,6 @@ const Contributor = () => {
         <Box
           component="img"
           src={picArr[person.id]}
-          style={{ width: '230px', height: '230px'}}
         ></Box>
         <h5>
           {person.firstName} {person.lastName}

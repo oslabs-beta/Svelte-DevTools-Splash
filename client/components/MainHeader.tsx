@@ -25,7 +25,7 @@ const MainHeader = () => {
             flexDirection: 'column',
             justifyContent: 'space-between',
             alignContent: 'center',
-            width: '65%',
+            width: '90%',
           }}
         >
           <Box
@@ -40,15 +40,6 @@ const MainHeader = () => {
           >
             <img
               src={logo}
-              // sx={{
-              //   display: 'flex',
-              //   flexDirection: 'row',
-              //   alignContent: 'center',
-              //   height: '300px',
-              //   width: '300px',
-              //   padding: '4rem',
-              // }}
-              // component="img"
             ></img>
           </Box>
           <Box
