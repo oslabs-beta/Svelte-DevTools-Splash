@@ -12,10 +12,12 @@ const HomePage = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
     console.log(engine);
 
-    // you can initialize the tsParticles instance (engine) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
-    //await loadFull(engine);
+    /*
+      You can initialize the tsParticles instance (engine) here, adding custom shapes or presets
+      this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+      starting from v2 you can add only the features you need reducing the bundle size
+      await loadFull(engine);
+    */
     await loadSlim(engine);
   }, []);
 
@@ -26,6 +28,8 @@ const HomePage = () => {
     []
   );
 
+  const particleColor = '#ff3e00';
+
   return (
     <div className='App'>
       <Navbar />
@@ -34,16 +38,14 @@ const HomePage = () => {
       <Press />
       <Contributor />
       <Particles
-        id='tsparticles'
         init={particlesInit}
         loaded={particlesLoaded}
-        style={{ zIndex: '-20000000', position: 'fixed' }}
         options={{
           fpsLimit: 120,
           interactivity: {
             events: {
               onClick: {
-                enable: true,
+                enable: false,
                 mode: 'push',
               },
               onHover: {
@@ -64,10 +66,10 @@ const HomePage = () => {
           },
           particles: {
             color: {
-              value: '#ff3e00',
+              value: particleColor,
             },
             links: {
-              color: '#ff3e00',
+              color: particleColor,
               distance: 150,
               enable: true,
               opacity: 0.5,
