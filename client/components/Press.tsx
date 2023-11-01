@@ -1,11 +1,12 @@
+import React from 'react';
 import Box from '@mui/material/Box';
 const productHuntLogo = require('../assets/productHuntLogo.png');
 const MediumLogo = require('../assets/MediumLogo.png');
 
 const Press = () => {
   return (
-    <div id="press">
-    <div
+    <div id='press'>
+      <div
         style={{
           display: 'flex',
           flexDirection: 'column',
@@ -15,7 +16,7 @@ const Press = () => {
       >
         <h2>Read About Us</h2>
         <Box
-          id="press-images"
+          id='press-images'
           sx={{
             display: 'flex',
             flexDirection: 'row',
@@ -24,8 +25,8 @@ const Press = () => {
           }}
         >
           <Box
-            id="MediumArticle"
-            component="img"
+            id='MediumArticle'
+            component='img'
             src={MediumLogo}
             onClick={() =>
               window.open(
@@ -35,8 +36,8 @@ const Press = () => {
           ></Box>
           <div style={{ width: '50px' }} />
           <Box
-            id="ProductHuntArticle"
-            component="img"
+            id='ProductHuntArticle'
+            component='img'
             src={productHuntLogo}
             onClick={() =>
               window.open('https://www.producthunt.com/posts/svelte-devtools')
