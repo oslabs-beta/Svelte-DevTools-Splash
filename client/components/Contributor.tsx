@@ -82,11 +82,12 @@ const Contributor = () => {
   // Creating contributors cards
   const svelteSquad: JSX.Element[] = teammates.map((person: TeamMember) => {
     return (
-      <Box className="contributor" style={{}}>
-        <Box
-          component="img"
-          src={picArr[person.id]}
-        ></Box>
+      <Box
+        key={person.firstName + '-' + person.lastName}
+        className='contributor'
+        style={{}}
+      >
+        <Box component='img' src={picArr[person.id]}></Box>
         <h5>
           {person.firstName} {person.lastName}
         </h5>
@@ -99,8 +100,8 @@ const Contributor = () => {
           }}
         >
           <Box
-            id="link"
-            component="img"
+            id='link'
+            component='img'
             onClick={() => {
               window.open(`${person.linkedin}`);
             }}
@@ -109,8 +110,8 @@ const Contributor = () => {
             sx={{ ':hover': { width: '10px' } }}
           ></Box>
           <Box
-            id="link"
-            component="img"
+            id='link'
+            component='img'
             onClick={() => {
               window.open(`${person.github}`);
             }}
@@ -124,7 +125,7 @@ const Contributor = () => {
 
   return (
     <div
-      id="teamTopDiv"
+      id='teamTopDiv'
       style={{
         display: 'flex',
         flexDirection: 'column',
@@ -134,7 +135,7 @@ const Contributor = () => {
       }}
     >
       <div
-        id="TeamBio"
+        id='TeamBio'
         style={{
           flexWrap: 'wrap',
           justifyContent: 'center',
@@ -143,9 +144,9 @@ const Contributor = () => {
       >
         <h2>Meet Our Engineering Team</h2>
         <Box
-          id="members"
-          justifyContent="center"
-          alignContent="center"
+          id='members'
+          justifyContent='center'
+          alignContent='center'
           sx={{
             display: 'flex',
             flexDirection: 'row',
