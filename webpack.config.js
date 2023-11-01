@@ -35,7 +35,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './index.html',
     }),
-    new FaviconsWebpackPlugin(path.join(__dirname, './favicon-16x16.png')),
+    new FaviconsWebpackPlugin(path.join(__dirname, './favicon.png')),
   ],
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
