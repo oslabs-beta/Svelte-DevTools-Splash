@@ -1,3 +1,4 @@
+import React from 'react';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 const googleWebStorePng = require('../assets/Google_Chrome_Web_Store_icon_2022.svg.png');
@@ -62,8 +63,8 @@ const Features = () => {
     tilt = false;
   }
   return (
-    <Grid id="features">
-      <Box id="button container" width="100%">
+    <Grid id='features'>
+      <Box id='button container' width='100%'>
         <Box
           sx={{
             display: 'flex',
@@ -74,10 +75,10 @@ const Features = () => {
           }}
         >
           <Box
-            id="buttonsDL"
-            component="img"
+            id='buttonsDL'
+            component='img'
             src={googleWebStorePng}
-            alt="Google Chrome Web Store icon"
+            alt='Google Chrome Web Store icon'
             onClick={() =>
               window.open(
                 'https://chrome.google.com/webstore/detail/svelte-devtools%2B/bgelkjgjabbfoeiicgoddeadicoofcfk?hl=en-GB'
@@ -92,19 +93,19 @@ const Features = () => {
           ></Box>
         </Box>
       </Box>
-      <div id="features-header">
+      <div id='features-header'>
         <h2>FEATURING</h2>
       </div>
-      <div id="features-content">
+      <div id='features-content'>
         {featureData.map((feature, index) => {
           const className = index % 2 === 0 ? 'feature' : 'feature-mirror';
           return (
             <Box className={className}>
-              <div className="feature-description">
+              <div className='feature-description'>
                 <h4>{feature.header}</h4>
                 <p>{feature.description}</p>
               </div>
-              <div className="screenshot">
+              <div className='screenshot'>
                 <Tilt
                   tiltEnable={tilt}
                   tiltMaxAngleX={8}
