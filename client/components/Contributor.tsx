@@ -1,4 +1,5 @@
-import { Box } from '@mui/material';
+import React from 'react';
+import Box from '@mui/material/Box';
 const linkedInPng = require('../assets/linkedIn.svg');
 const githubPng = require('../assets/github.svg');
 const maciej = require('../assets/MaciejPng.png');
@@ -87,6 +88,7 @@ const Contributor = () => {
         className='contributor'
         style={{}}
       >
+      <Box className='contributor' style={{}}>
         <Box component='img' src={picArr[person.id]}></Box>
         <h5>
           {person.firstName} {person.lastName}

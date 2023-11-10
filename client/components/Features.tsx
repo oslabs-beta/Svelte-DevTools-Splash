@@ -1,3 +1,4 @@
+import React from 'react';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 const googleWebStorePng = require('../assets/Google_Chrome_Web_Store_icon_2022.svg.png');
