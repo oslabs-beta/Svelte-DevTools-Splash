@@ -99,8 +99,14 @@ const Features = () => {
       <div id='features-content'>
         {featureData.map((feature, index) => {
           const className = index % 2 === 0 ? 'feature' : 'feature-mirror';
+          // Create unique keys for each feature
+          let key = 'feature';
+          feature.header.split(' ').forEach((item) => {
+            key += '-' + item.toLowerCase();
+          });
+
           return (
-            <Box className={className}>
+            <Box key={key} className={className}>
               <div className='feature-description'>
                 <h4>{feature.header}</h4>
                 <p>{feature.description}</p>

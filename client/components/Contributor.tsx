@@ -83,6 +83,11 @@ const Contributor = () => {
   // Creating contributors cards
   const svelteSquad: JSX.Element[] = teammates.map((person: TeamMember) => {
     return (
+      <Box
+        key={person.firstName + '-' + person.lastName}
+        className='contributor'
+        style={{}}
+      >
       <Box className='contributor' style={{}}>
         <Box component='img' src={picArr[person.id]}></Box>
         <h5>
