@@ -85,41 +85,42 @@ const Contributor = () => {
     return (
       <Box
         key={person.firstName + '-' + person.lastName}
-        className='contributor'
+        className="contributor"
         style={{}}
       >
-      <Box className='contributor' style={{}}>
-        <Box component='img' src={picArr[person.id]}></Box>
-        <h5>
-          {person.firstName} {person.lastName}
-        </h5>
-        <p>Software Engineer</p>
-        <Box
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'center',
-          }}
-        >
+        <Box className="contributor" style={{}}>
+          <Box component="img" src={picArr[person.id]}></Box>
+          <h5>
+            {person.firstName} {person.lastName}
+          </h5>
+          <p>Software Engineer</p>
           <Box
-            id='link'
-            component='img'
-            onClick={() => {
-              window.open(`${person.linkedin}`);
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'center',
             }}
-            style={styles.icons}
-            src={linkedInPng}
-            sx={{ ':hover': { width: '10px' } }}
-          ></Box>
-          <Box
-            id='link'
-            component='img'
-            onClick={() => {
-              window.open(`${person.github}`);
-            }}
-            style={styles.icons}
-            src={githubPng}
-          ></Box>
+          >
+            <Box
+              id="link"
+              component="img"
+              onClick={() => {
+                window.open(`${person.linkedin}`);
+              }}
+              style={styles.icons}
+              src={linkedInPng}
+              sx={{ ':hover': { width: '10px' } }}
+            ></Box>
+            <Box
+              id="link"
+              component="img"
+              onClick={() => {
+                window.open(`${person.github}`);
+              }}
+              style={styles.icons}
+              src={githubPng}
+            ></Box>
+          </Box>
         </Box>
       </Box>
     );
@@ -127,7 +128,7 @@ const Contributor = () => {
 
   return (
     <div
-      id='teamTopDiv'
+      id="teamTopDiv"
       style={{
         display: 'flex',
         flexDirection: 'column',
@@ -137,7 +138,7 @@ const Contributor = () => {
       }}
     >
       <div
-        id='TeamBio'
+        id="TeamBio"
         style={{
           flexWrap: 'wrap',
           justifyContent: 'center',
@@ -146,9 +147,9 @@ const Contributor = () => {
       >
         <h2>Meet Our Engineering Team</h2>
         <Box
-          id='members'
-          justifyContent='center'
-          alignContent='center'
+          id="members"
+          justifyContent="center"
+          alignContent="center"
           sx={{
             display: 'flex',
             flexDirection: 'row',
