@@ -1,9 +1,9 @@
-import React, { useCallback } from 'react';
-import type { Container, Engine } from 'tsparticles-engine';
-import * as _Particles from 'react-tsparticles';
-import { loadSlim } from 'tsparticles-slim';
+import React, { useCallback } from "react";
+import type { Container, Engine } from "tsparticles-engine";
+import * as _Particles from "react-tsparticles";
+import { loadSlim } from "tsparticles-slim";
 
-const particleColor = '#ff3e00';
+const particleColor = "#ff3e00";
 
 const Particles = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -22,7 +22,7 @@ const Particles = () => {
     async (container: Container | undefined) => {
       await console.log(container);
     },
-    []
+    [],
   );
 
   return (
@@ -35,11 +35,11 @@ const Particles = () => {
           events: {
             onClick: {
               enable: false,
-              mode: 'push',
+              mode: "push",
             },
             onHover: {
               enable: true,
-              mode: 'repulse',
+              mode: "repulse",
             },
             resize: true,
           },
@@ -65,10 +65,10 @@ const Particles = () => {
             width: 1,
           },
           move: {
-            direction: 'none',
+            direction: "none",
             enable: true,
             outModes: {
-              default: 'bounce',
+              default: "bounce",
             },
             random: false,
             speed: 1,
@@ -85,7 +85,7 @@ const Particles = () => {
             value: 0.25,
           },
           shape: {
-            type: 'circle',
+            type: "circle",
           },
           size: {
             value: { min: 1, max: 5 },

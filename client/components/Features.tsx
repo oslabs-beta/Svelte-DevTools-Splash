@@ -1,15 +1,15 @@
-import React from 'react';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-const googleWebStorePng = require('../assets/Google_Chrome_Web_Store_icon_2022.svg.png');
-const StepAndTree = require('../assets/StepAndTree.gif');
-const Inspect = require('../assets/Inspect.gif');
-const Edit = require('../assets/Edit.gif');
-const Dynamic = require('../assets/Dynamic.gif');
-const Rewind = require('../assets/Rewind.gif');
-import Tilt from 'react-parallax-tilt';
-import { browserName } from 'react-device-detect';
-import '../../index.scss';
+import React from "react";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+const googleWebStorePng = require("../assets/Google_Chrome_Web_Store_icon_2022.svg.png");
+const StepAndTree = require("../assets/StepAndTree.gif");
+const Inspect = require("../assets/Inspect.gif");
+const Edit = require("../assets/Edit.gif");
+const Dynamic = require("../assets/Dynamic.gif");
+const Rewind = require("../assets/Rewind.gif");
+import Tilt from "react-parallax-tilt";
+import { browserName } from "react-device-detect";
+import "../../index.scss";
 
 const featureData = [
   {
@@ -59,59 +59,59 @@ const featureData = [
 
 const Features = () => {
   let tilt = true;
-  if (browserName.includes('Safari')) {
+  if (browserName.includes("Safari")) {
     tilt = false;
   }
   return (
-    <Grid id='features'>
-      <Box id='button container' width='100%'>
+    <Grid id="features">
+      <Box id="button container" width="100%">
         <Box
           sx={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'center',
-            width: '100%',
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            width: "100%",
             mb: 4,
           }}
         >
           <Box
-            id='buttonsDL'
-            component='img'
+            id="buttonsDL"
+            component="img"
             src={googleWebStorePng}
-            alt='Google Chrome Web Store icon'
+            alt="Google Chrome Web Store icon"
             onClick={() =>
               window.open(
-                'https://chrome.google.com/webstore/detail/svelte-devtools%2B/bgelkjgjabbfoeiicgoddeadicoofcfk?hl=en-GB'
+                "https://chrome.google.com/webstore/detail/svelte-devtools%2B/bgelkjgjabbfoeiicgoddeadicoofcfk?hl=en-GB",
               )
             }
             sx={{
-              width: '90px',
-              height: '90px',
-              paddingTop: '5px',
-              cursor: 'pointer',
+              width: "90px",
+              height: "90px",
+              paddingTop: "5px",
+              cursor: "pointer",
             }}
           ></Box>
         </Box>
       </Box>
-      <div id='features-header'>
+      <div id="features-header">
         <h2>FEATURING</h2>
       </div>
-      <div id='features-content'>
+      <div id="features-content">
         {featureData.map((feature, index) => {
-          const className = index % 2 === 0 ? 'feature' : 'feature-mirror';
+          const className = index % 2 === 0 ? "feature" : "feature-mirror";
           // Create unique keys for each feature
-          let key = 'feature';
-          feature.header.split(' ').forEach((item) => {
-            key += '-' + item.toLowerCase();
+          let key = "feature";
+          feature.header.split(" ").forEach((item) => {
+            key += "-" + item.toLowerCase();
           });
 
           return (
             <Box key={key} className={className}>
-              <div className='feature-description'>
+              <div className="feature-description">
                 <h4>{feature.header}</h4>
                 <p>{feature.description}</p>
               </div>
-              <div className='screenshot'>
+              <div className="screenshot">
                 <Tilt
                   tiltEnable={tilt}
                   tiltMaxAngleX={8}

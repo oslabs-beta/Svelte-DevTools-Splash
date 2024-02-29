@@ -1,11 +1,10 @@
-import React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import { Grid } from '@mui/material';
-import Button from '@mui/material/Button';
-const logo2 = require('../assets/NewLogo.png');
-
+import React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import { Grid } from "@mui/material";
+import Button from "@mui/material/Button";
+const logo2 = require("../assets/NewLogo.png");
 
 const NavbarLogin: React.FC = () => {
   return (
@@ -13,14 +12,14 @@ const NavbarLogin: React.FC = () => {
       <Box>
         <AppBar
           style={{
-            background: '#000000',
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-between',
+            background: "#000000",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
           }}
         >
           <Box
-            sx={{ display: 'flex', alignItems: 'center', marginLeft: '20px' }}
+            sx={{ display: "flex", alignItems: "center", marginLeft: "20px" }}
           >
             {/* Replace with your first logo */}
             {/* <img
@@ -28,25 +27,25 @@ const NavbarLogin: React.FC = () => {
               alt='Logo 1'
               style={{ width: '30px', marginRight: '10px' }}
             /> */}
-            <span style={{ color: 'inherit', fontSize: '32px' }}>
+            <span style={{ color: "inherit", fontSize: "32px" }}>
               Svelte DevTools
             </span>
             {/* Replace with your second logo */}
             <img
               src={logo2}
               alt="Logo 2"
-              style={{ width: '30px', marginLeft: '10px' }}
+              style={{ width: "30px", marginLeft: "10px" }}
             />
           </Box>
           <Toolbar>
             <Button
               color="inherit"
               href="/"
-              style={{ marginRight: '20px', fontSize: '18px' }}
+              style={{ marginRight: "20px", fontSize: "18px" }}
               sx={{
-                ':hover': {
-                  backgroundColor: '#ff5e00',
-                  color: 'white',
+                ":hover": {
+                  backgroundColor: "#ff5e00",
+                  color: "white",
                 },
               }}
             >
@@ -55,11 +54,11 @@ const NavbarLogin: React.FC = () => {
             <Button
               color="inherit"
               href="/signup"
-              style={{ marginRight: '20px', fontSize: '18px' }}
+              style={{ marginRight: "20px", fontSize: "18px" }}
               sx={{
-                ':hover': {
-                  backgroundColor: '#ff5e00',
-                  color: 'white',
+                ":hover": {
+                  backgroundColor: "#ff5e00",
+                  color: "white",
                 },
               }}
             >
@@ -68,11 +67,11 @@ const NavbarLogin: React.FC = () => {
             <Button
               color="inherit"
               href="/login"
-              style={{ fontSize: '18px' }}
+              style={{ fontSize: "18px" }}
               sx={{
-                ':hover': {
-                  backgroundColor: '#ff5e00',
-                  color: 'white',
+                ":hover": {
+                  backgroundColor: "#ff5e00",
+                  color: "white",
                 },
               }}
             >
