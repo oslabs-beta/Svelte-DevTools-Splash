@@ -1,21 +1,21 @@
-import React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import { Grid, Button } from '@mui/material';
+import React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import { Grid, Button } from "@mui/material";
 
 const scrollToSection = (selector: string) => {
   const section = document.querySelector(selector);
   if (section) {
-    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 };
 
 const buttonStyles = {
-  fontSize: '1rem',
-  marginRight: '20px',
-  ':hover': {
-    backgroundColor: '#ff5e00',
-    color: 'white',
+  fontSize: "1rem",
+  marginRight: "20px",
+  ":hover": {
+    backgroundColor: "#ff5e00",
+    color: "white",
   },
 };
 
@@ -25,16 +25,16 @@ const Navbar: React.FC = () => {
       <Box>
         <AppBar id="app-bar">
           <div id="title">
-            <span style={{ color: 'inherit', fontSize: '32px' }}>
+            <span style={{ color: "inherit", fontSize: "32px" }}>
               Svelte DevTools+
             </span>
           </div>
           <div id="tool-bar">
             {[
-              { label: 'Extension', selector: '#logo' },
-              { label: 'Features', selector: '#features' },
-              { label: 'Press', selector: '#press' },
-              { label: 'Team', selector: '#TeamBio' },
+              { label: "Extension", selector: "#logo" },
+              { label: "Features", selector: "#features" },
+              { label: "Press", selector: "#press" },
+              { label: "Team", selector: "#TeamBio" },
             ].map((item) => (
               <Button
                 key={item.label}

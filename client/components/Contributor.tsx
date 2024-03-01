@@ -1,125 +1,128 @@
-import React from 'react';
-import Box from '@mui/material/Box';
-const linkedInPng = require('../assets/linkedIn.svg');
-const githubPng = require('../assets/github.svg');
-const maciej = require('../assets/MaciejPng.png');
-const laura = require('../assets/LauraPng.png');
-const francis = require('../assets/FrancisPng.png');
-const janice = require('../assets/JanicePng.png');
-const alex = require('../assets/AlexPng.png');
+import React from "react";
+import Box from "@mui/material/Box";
+const linkedInPng = require("../assets/linkedIn.svg");
+const githubPng = require("../assets/github.svg");
+const maciejImg = require("../assets/MaciejPng.png");
+const lauraImg = require("../assets/LauraPng.png");
+const francisImg = require("../assets/FrancisPng.png");
+const janiceImg = require("../assets/JanicePng.png");
+const alexImg = require("../assets/AlexPng.png");
 
 const styles = {
   icons: {
-    width: '40px',
-    height: '40px',
-    marginLeft: '10px',
-    marginRight: '10px',
-    marginBottom: '30px',
-    marginTop: '10px',
-    display: 'flex',
-    cursor: 'pointer',
+    width: "40px",
+    height: "40px",
+    marginLeft: "10px",
+    marginRight: "10px",
+    marginBottom: "30px",
+    marginTop: "10px",
+    display: "flex",
+    cursor: "pointer",
   },
 };
 
 type TeamMember = {
   id: number;
+  img: string;
   firstName: string;
   lastName: string;
-  github: string;
-  linkedin: string;
+  gitHub: string;
+  linkedIn: string;
 };
 
-const picArr = [francis, alex, laura, maciej, janice];
-const firstArr = ['Francis', 'Alexander', 'Laura', 'Maciej', 'Janice'];
-const lastArr = ['Espinoza', 'Vranas', 'Glass-Johnston', 'Małecki', 'Chu'];
-const gitArr = [
-  'https://github.com/francis8933',
-  'https://github.com/avranas',
-  'https://github.com/ellgeejay',
-  'https://github.com/maciekmalecki/',
-  'https://github.com/JaniceKZ',
-];
-const linkArr = [
-  'https://www.linkedin.com/in/espinozafrancis/',
-  'https://www.linkedin.com/in/avranas/',
-  'https://www.linkedin.com/in/laura-glass-johnston/',
-  'https://www.linkedin.com/in/mmaciej/',
-  'https://www.linkedin.com/in/janice-chu-075705284/',
-];
+const francis: TeamMember = {
+  id: 0,
+  img: francisImg,
+  firstName: "Francis",
+  lastName: "Espinoza",
+  gitHub: "https://github.com/francis8933",
+  linkedIn: "https://www.linkedin.com/in/espinozafrancis/",
+};
 
-const teammates: Array<TeamMember> = [];
+const alex: TeamMember = {
+  id: 1,
+  img: alexImg,
+  firstName: "Alexander",
+  lastName: "Vranas",
+  gitHub: "https://github.com/avranas",
+  linkedIn: "https://www.linkedin.com/in/avranas/",
+};
 
-for (let i = 0; i < gitArr.length; i++) {
-  const newMember: TeamMember = {
-    id: i,
-    firstName: firstArr[i],
-    lastName: lastArr[i],
-    github: gitArr[i],
-    linkedin: linkArr[i],
-  };
-  teammates.push(newMember);
-}
+const laura: TeamMember = {
+  id: 2,
+  img: lauraImg,
+  firstName: "Laura",
+  lastName: "Glass-Johnston",
+  gitHub: "https://github.com/ellgeejay",
+  linkedIn: "https://www.linkedin.com/in/laura-glass-johnston/",
+};
+
+const maciej: TeamMember = {
+  id: 3,
+  img: maciejImg,
+  firstName: "Maciej",
+  lastName: "Małecki",
+  gitHub: "https://github.com/maciekmalecki/",
+  linkedIn: "https://www.linkedin.com/in/mmaciej/",
+};
+
+const janice: TeamMember = {
+  id: 4,
+  img: janiceImg,
+  firstName: "Janice",
+  lastName: "Chu",
+  gitHub: "https://github.com/JaniceKZ",
+  linkedIn: "https://www.linkedin.com/in/janice-chu-075705284/",
+};
+
+const team: Array<TeamMember> = [];
+team.push(francis);
+team.push(alex);
+team.push(laura);
+team.push(maciej);
+team.push(janice);
 
 const Contributor = () => {
-  /*
-    Getting Contributors from Database
-  // const [teammates, setTeammates] = useState([]);
-
-  // const team = async () => {
-  //   let people = await fetch('http://localhost:3000/contributors', {
-  //     method: 'GET',
-  //     headers: { 'Content-Type': 'application/json' },
-  //   });
-  //   const response = await people.json();
-  //   console.log(response, 'response contributors');
-  //   setTeammates(response);
-  // };
-
-  // useEffect(() => {
-  //   team();
-  // }, []);
-*/
-
   // Creating contributors cards
-  const svelteSquad: JSX.Element[] = teammates.map((person: TeamMember) => {
+  const svelteSquad: JSX.Element[] = team.map((member: TeamMember) => {
     return (
       <Box
-        key={person.firstName + '-' + person.lastName}
-        className='contributor'
-        style={{}}
+        key={member.firstName + "-" + member.lastName}
+        className="contributor"
       >
-      <Box className='contributor' style={{}}>
-        <Box component='img' src={picArr[person.id]}></Box>
-        <h5>
-          {person.firstName} {person.lastName}
-        </h5>
-        <p>Software Engineer</p>
-        <Box
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'center',
-          }}
-        >
+        <Box className="contributor">
+          <Box component="img" src={member.img}></Box>
+          <h5>
+            {member.firstName} {member.lastName}
+          </h5>
+          <p>Software Engineer</p>
           <Box
-            id='link'
-            component='img'
-            onClick={() => {
-              window.open(`${person.linkedin}`);
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
             }}
-            style={styles.icons}
-            src={linkedInPng}
-            sx={{ ':hover': { width: '10px' } }}
-          ></Box>
-          <Box
-            id='link'
-            component='img'
-            onClick={() => {
-              window.open(`${person.github}`);
-            }}
-            style={styles.icons}
-            src={githubPng}
-          ></Box>
+          >
+            <Box
+              id="link"
+              component="img"
+              onClick={() => {
+                window.open(`${member.linkedIn}`);
+              }}
+              style={styles.icons}
+              src={linkedInPng}
+              sx={{ ":hover": { width: "10px" } }}
+            ></Box>
+            <Box
+              id="link"
+              component="img"
+              onClick={() => {
+                window.open(`${member.gitHub}`);
+              }}
+              style={styles.icons}
+              src={githubPng}
+            ></Box>
+          </Box>
         </Box>
       </Box>
     );
@@ -127,34 +130,34 @@ const Contributor = () => {
 
   return (
     <div
-      id='teamTopDiv'
+      id="teamTopDiv"
       style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginBottom: '150px',
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        marginBottom: "150px",
       }}
     >
       <div
-        id='TeamBio'
+        id="TeamBio"
         style={{
-          flexWrap: 'wrap',
-          justifyContent: 'center',
-          alignItems: 'center',
+          flexWrap: "wrap",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
         <h2>Meet Our Engineering Team</h2>
         <Box
-          id='members'
-          justifyContent='center'
-          alignContent='center'
+          id="members"
+          justifyContent="center"
+          alignContent="center"
           sx={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'center',
-            flexWrap: 'wrap',
-            alignItems: 'flex-start',
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            alignItems: "flex-start",
             mb: 10,
           }}
         >

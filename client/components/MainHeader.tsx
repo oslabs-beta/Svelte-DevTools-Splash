@@ -1,7 +1,7 @@
-import React from 'react';
-import { Grid } from '@mui/material';
-const logo = require('../assets/NewLogo.png');
-import Box from '@mui/material/Box';
+import React from "react";
+import { Grid } from "@mui/material";
+const logo = require("../assets/NewLogo.png");
+import Box from "@mui/material/Box";
 
 const MainHeader = () => {
   return (
@@ -10,45 +10,43 @@ const MainHeader = () => {
         // disableEqualOverflow='true'
         style={{
           // backgroundColor: '#120838',
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'space-around',
-          alignContent: 'center',
-          width: '100%',
-          height: '100%',
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-around",
+          alignContent: "center",
+          width: "100%",
+          height: "100%",
           marginTop: 10,
         }}
       >
         <Grid
           sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-            alignContent: 'center',
-            width: '90%',
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            alignContent: "center",
+            width: "90%",
           }}
         >
           <Box
             id="logo"
             sx={{
-              display: 'flex',
-              flexDirection: 'row',
-              justifyContent: 'center',
-              alignContent: 'center',
-              alignItems: 'center',
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              alignContent: "center",
+              alignItems: "center",
             }}
           >
-            <img
-              src={logo}
-            ></img>
+            <img src={logo}></img>
           </Box>
           <Box
             id="download"
             sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-around',
-              alignItems: 'center',
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-around",
+              alignItems: "center",
             }}
           >
             <h1>Svelte DevTools+</h1>
