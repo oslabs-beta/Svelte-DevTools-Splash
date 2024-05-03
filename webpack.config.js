@@ -31,12 +31,12 @@ module.exports = {
       },
     ],
   },
-  // plugins: [
-  //   new HtmlWebpackPlugin({
-  //     template: "./index.html",
-  //   }),
-  //   new FaviconsWebpackPlugin(path.join(__dirname, "./favicon.png")),
-  // ],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./index.html",
+    }),
+    // new FaviconsWebpackPlugin(path.join(__dirname, "./favicon.png")),
+  ],
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
   },
