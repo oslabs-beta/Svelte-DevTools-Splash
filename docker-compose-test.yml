@@ -1,7 +1,7 @@
 version: '3'
 services:
   test:
-    image: vranasware/splash-dev
+    image: vranasware/splash-prod
     container_name: splash-test
     ports:
       - "3000:3000"
