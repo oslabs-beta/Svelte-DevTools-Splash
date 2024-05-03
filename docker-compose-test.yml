@@ -1,7 +1,7 @@
 version: '3'
 services:
   test:
-    image: svelte-squad/splash-dev
+    image: vranasware/splash-dev
     container_name: splash-test
     ports:
       - "3000:3000"
