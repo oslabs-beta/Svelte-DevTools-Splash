@@ -11,9 +11,8 @@ jobs:
         with:
           version: '3.x'
       - run: python3 -m pip install --upgrade pip
-      - run: python3 -m pip install --user awscli
+      - run: python3 -m pip install 'botocore==1.34.99' 'awscli==1.32.99'
       - run: python3 -m pip install --user awsebcli
-      - run: python3 -m pip install --upgrade awscli botocore
       - run: aws --version
       - run: eb --version
       - run: sh ./scripts/deploy.sh
