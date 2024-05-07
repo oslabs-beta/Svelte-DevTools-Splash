@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid } from "@mui/material";
-const logo = require("../assets/NewLogo.png");
+const logo = require("../assets/logo.png");
 import Box from "@mui/material/Box";
 
 const MainHeader = () => {
